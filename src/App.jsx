@@ -1,4 +1,6 @@
+import Footer from './components/Footer';
 import Landing from './components/Landing';
+import Projects from './components/Projects';
 import Tech from './components/Tech';
 
 function App() {
@@ -8,6 +10,8 @@ function App() {
    <>
    <Landing />
    <Tech />
+   <Projects/>
+   <Footer/>
    </>
   )
 }
