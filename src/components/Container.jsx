@@ -6,6 +6,7 @@ const Container = () => {
   return (
     <div className="container__wrapper">
       <div className="row">
+        <div className="container">
         <div className="left">
           <h1 className="title">Hey</h1>
           <h1 className="title blue">I'm Abde</h1>
@@ -18,6 +19,7 @@ const Container = () => {
         </div>
         <div className="right">
           <Kinetic/>
+        </div>
         </div>
       </div>
     </div>

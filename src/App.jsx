@@ -1,8 +1,5 @@
-import { useEffect, useState } from 'react'
-import * as THREE from 'three';
-import { TeapotGeometry } from 'three/examples/jsm/geometries/TeapotGeometry';
-import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry';
 import Landing from './components/Landing';
+import Tech from './components/Tech';
 
 function App() {
 
@@ -10,6 +7,7 @@ function App() {
   return (
    <>
    <Landing />
+   <Tech />
    </>
   )
 }

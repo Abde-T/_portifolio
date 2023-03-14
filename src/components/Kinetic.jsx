@@ -10,7 +10,7 @@ function Kinetic() {
     kinetic.animate();
     kinetic.camera.position.z = 30;
     kinetic.controls.enableZoom = false;
-    kinetic.renderer.setSize(window.innerWidth / 1.5, window.innerHeight / 1.5);
+    kinetic.renderer.setSize(1000, 700);
     const light = new THREE.AmbientLight(0xffffff);
     kinetic.scene.add(light);
 
@@ -45,7 +45,7 @@ void main() {
   float time = uTime;
 
   vec2 uv = vUv;
-  uv.x += sin(uv.y * 0.25);
+  uv.x += sin(uv.y * 0.002);
   vec2 repeat = vec2(6.0, 12.0);
   uv = fract(uv * repeat + vec2(0.0, time));
   
@@ -74,9 +74,17 @@ void main() {
     const animate = () => {
 
       requestAnimationFrame(animate);
-      torus.rotation.z += 0.005;
-      kinetic.renderer.render(kinetic.scene, kinetic.camera);
+      torus.rotation.z += 0.009;
+      render()
     };
+
+    let clock;
+    clock = new THREE.Clock();
+
+    function render() {
+      Torusmaterial.uniforms.uTime.value = clock.getElapsedTime();
+      kinetic.renderer.render(kinetic.scene, kinetic.camera);
+    }
     animate();
   }, []);
 
