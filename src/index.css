@@ -14,7 +14,7 @@ li {
 body {
   /*background: linear-gradient(rgb(64, 66, 70) 0%, rgba(1, 14, 51, 0.945) 100%);*/
   background: linear-gradient(
-    rgba(210, 211, 212, 0.945) 0%,
+    #d2d3d4f1 0%,
     rgb(79, 81, 87) 100%
   );
 }
@@ -71,6 +71,7 @@ a {
   width: 20px;
 }
 .link__hover-effect {
+  cursor: pointer;
   position: relative;
 }
 .link__hover-effect:after {
@@ -94,7 +95,7 @@ a {
 }
 
 .social__link {
-  background-color: rgb(11, 187, 187);
+  background-color: #0077ff;
   color: rgb(255, 255, 255);
   font-size: 14px;
   padding: 6px;
@@ -140,9 +141,10 @@ a {
   max-width: 500px;
 }
 .blue {
-  color: rgb(0, 119, 255);
+  color: #0077ff;
 }
 #text {
+  
   z-index: 10;
   position: absolute;
   top: 50%;
@@ -293,31 +295,21 @@ footer {
   color: white;
 }
 
-/*.modal--open nav, .modal--open .scroll, .modal--open .header, .modal--open .container__wrapper {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 400ms;
-}*/
 .modal{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
+  width: 100%;
   max-width: 1100px;
   height: 700px;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
-  visibility: hidden;
-  z-index: -1;
-  transition: visibility 1s, z-index 1s, box-shadow 0.5s ease ;
+  z-index: 20;
+  box-shadow: 0 0px 100px 100px rgb(0,0,0,0.55);
 }
-/*.modal--open .modal{
-  z-index: 60;
-  box-shadow: 0 20px 80px 0 rgb(0,0,0,0.55);
-  visibility: visible;
-}*/
+
 .modal__half{
   width: 50%;
   padding: 40px 72px;
@@ -325,16 +317,13 @@ footer {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  transition: all 300ms ease-in;
 }
-/*.modal--open .modal__about, .modal--open .modal__contact{
+.modal .modal__about, .modal .modal__contact{
   transform: translate(0%);
-}*/
+}
 .modal__about{
   background-color: #00524e;
   color: #ffffff;
-  transform: translateX(-100%);
-  
 }
 .modal__title{
   font-size: 26px;
@@ -350,7 +339,7 @@ footer {
 .modal__contact{
   background-color: #ffffff;
   color: white;
-  transform: translateX(110%);
+ 
 }
 .model__exit{
   position: absolute;

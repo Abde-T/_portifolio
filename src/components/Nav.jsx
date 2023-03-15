@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 import Modal from "./Modal";
 
 function Nav() {
-  const [openMomdal, setOpenModal] = useState(true);
+  const [openMomdal, setOpenModal] = useState(false);
 
   return (
     <div className="nav__wrapper">
@@ -16,8 +16,11 @@ function Nav() {
           <ul className="nav__link--list">
             <li className="nav__link">
               <a
-                href="#"
+               
                 className="nav__link link__hover-effect link__hover-effect--black "
+                onClick={() => {
+                  setOpenModal(true);
+                }}
               >
                 About
               </a>
@@ -31,14 +34,14 @@ function Nav() {
               </a>
             </li>
             <li className="nav__link">
-              <button
+              <a
                 className="nav__link link__hover-effect link__hover-effect--black"
                 onClick={() => {
                   setOpenModal(true);
                 }}
               >
                 Contact
-              </button>
+              </a>
               {openMomdal && <Modal closeModal={setOpenModal} />}
             </li>
             <li className="nav__link click">

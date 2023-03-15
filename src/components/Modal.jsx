@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Modal({ closeModal }) {
   return (
     <>
-    <div className="modal--open modal">
+    <div className="modal">
       <div className="modal__half modal__about">
         <h3 className="modal__title modal__title--about">
           Here's a bit about me.

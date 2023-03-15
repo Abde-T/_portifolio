@@ -1,15 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/logo.png";
+import Modal from "./Modal";
 function Footer(props) {
-    let isModalOpen = false;
-    function toggleModal(){
-        if(isModalOpen){
-            isModalOpen = false;
-            return document.body.classList.remove("modal--open")
-        }
-        isModalOpen = true;
-        document.body.classList += " modal--open";
-    }
+  const [openMomdal, setOpenModal] = useState(false);
 
   return (
     <footer>
@@ -31,12 +24,15 @@ function Footer(props) {
             LinkdIn
           </a>
           <a
-            href="#"
-            
+          href="#"
+            onClick={() => {
+              setOpenModal(true);
+            }}
             className="footer__social--link link__hover-effect link__hover-effect--white"
           >
             Contact
           </a>
+          {openMomdal && <Modal closeModal={setOpenModal} />}
           <a
             href="#"
             className="footer__social--link link__hover-effect link__hover-effect--white"
