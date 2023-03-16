@@ -22,7 +22,7 @@ function Ball(props) {
     ball.camera.position.z = 9;
    //ball.controls = new OrbitControls(ball.camera, ball.renderer.domElement);
     //ball.controls.enableZoom = false;
-    ball.renderer.setSize(1200, 300);
+    ball.renderer.setSize(window.innerWidth/1.5, window.innerHeight/2.9);
     const light = new THREE.AmbientLight(0xffffff);
     ball.scene.add(light);
 

@@ -28,7 +28,7 @@ function Nav() {
             <li className="nav__link">
               <a
                 href=".projects"
-                className="nav__link link__hover-effect link__hover-effect--black"
+                className="displ__none nav__link link__hover-effect link__hover-effect--black"
               >
                 Projects
               </a>

@@ -10,7 +10,7 @@ function Projects() {
     <section className="projects">
       <div className="row">
         <div className="projects__wrapper">
-          <h2>
+          <h2 className="proj__header">
             Here are some of my <span className="blue">projects:</span>{" "}
           </h2>
           <div className="project__list">
@@ -20,7 +20,7 @@ function Projects() {
                 <div className="project_wrapper--bg"></div>
                 <div className="project__description">
                   <h3 className="project__description--title">
-                    Fake shop Projects
+                    Fake shop Project
                   </h3>
                   <h4 className="project__description--sub-title">
                     Html, Css, JavaScript, React
@@ -55,7 +55,7 @@ function Projects() {
                 <div className="project_wrapper--bg"></div>
                 <div className="project__description">
                   <h3 className="project__description--title">
-                    Movie heaven Projects
+                    Movie heaven Project
                   </h3>
                   <h4 className="project__description--sub-title">
                     Html, Css, JavaScript, React
@@ -90,7 +90,7 @@ function Projects() {
                 <div className="project_wrapper--bg"></div>
                 <div className="project__description">
                   <h3 className="project__description--title">
-                    Car Sales Projects
+                    Car Sales Project
                   </h3>
                   <h4 className="project__description--sub-title">
                     Html, Css, JavaScript

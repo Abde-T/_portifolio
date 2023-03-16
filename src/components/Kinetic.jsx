@@ -8,13 +8,13 @@ function Kinetic() {
     const kinetic = new SceneInit("text");
     kinetic.initialize();
     kinetic.animate();
-    kinetic.camera.position.z = 30;
+    kinetic.camera.position.z = 33;
     kinetic.controls.enableZoom = false;
-    kinetic.renderer.setSize(1000, 700);
+    kinetic.renderer.setSize(window.innerWidth/1.2, window.innerHeight/1.4);
     const light = new THREE.AmbientLight(0xffffff);
     kinetic.scene.add(light);
 
-    const Torusgeometry = new THREE.TorusGeometry(9, 3);
+    const Torusgeometry = new THREE.TorusGeometry(10, 3);
 
     const texture = new THREE.TextureLoader().load(img, (texture) => {
       texture.minFilter = THREE.NearestFilter;
@@ -68,7 +68,7 @@ void main() {
 
     const torus = new THREE.Mesh(Torusgeometry, Torusmaterial);
     torus.rotation.x=150
-    torus.rotation.y=-100
+    torus.rotation.y-=100
     kinetic.scene.add(torus);
 
     const animate = () => {
