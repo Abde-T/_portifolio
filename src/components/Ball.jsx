@@ -14,15 +14,15 @@ function Ball(props) {
     ball.initialize();
     ball.animate();
     ball.camera = new THREE.PerspectiveCamera(
-      20,
-      1200 / 300,
+      40,
+      window.innerWidth*1.5 / window.innerHeight*2,
       1,
       1000
     );
-    ball.camera.position.z = 9;
+    ball.camera.position.z = 5;
    //ball.controls = new OrbitControls(ball.camera, ball.renderer.domElement);
     //ball.controls.enableZoom = false;
-    ball.renderer.setSize(window.innerWidth/1.5, window.innerHeight/2.9);
+    ball.renderer.setSize(window.innerWidth, window.innerHeight/2.9);
     const light = new THREE.AmbientLight(0xffffff);
     ball.scene.add(light);
 

@@ -6,7 +6,7 @@ function Tech(props) {
     <section className="tech">
       <div className="row">
       <div className="tech__wrapper">
-        <h1>This is my <span className="blue">technology stack</span> </h1>
+        <h1 data-aos="fade-up"  data-aos-once="true">This is my <span className="blue">technology stack</span> </h1>
       <Ball />
       </div>
       </div>

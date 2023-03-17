@@ -8,7 +8,8 @@ import {
   faAdjust,
   faFilePdf,
   faSpinner,
-  faTimes
+  faTimes,
+  
 } from "@fortawesome/free-solid-svg-icons";
 library.add(faLink,faAdjust,faFilePdf, faSpinner, faTimes);
 

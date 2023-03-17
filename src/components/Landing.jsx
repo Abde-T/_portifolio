@@ -2,10 +2,10 @@ import React from 'react';
 import Container from './Container';
 import Nav from './Nav';
 
-function Landing() {
+function Landing({toggleTheme, theme}) {
     return (
         <section>
-           <Nav />
+           <Nav theme ={theme} toggleTheme={toggleTheme} />
            <Container/>
         </section>
     );

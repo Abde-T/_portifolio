@@ -2,19 +2,58 @@ import React, { useEffect } from "react";
 import * as THREE from "three";
 import SceneInit from "../lib/SceneInit";
 import img from "../assets/name.png";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+
 
 function Kinetic() {
+  /*let cnv;
+
+  window.onload = function () {
+    console.log("loading");
+    cnv = document.getElementById("text");
+    resizeCanvas();
+    prepareDocument();
+  };
+  window.onresize = function () {
+    console.log("easize");
+    resizeCanvas();
+  };
+  function resizeCanvas() {
+    cnv.width = window.innerWidth;
+    cnv.height = window.innerHeight;
+  }
+  function prepareDocument() {
+    document.body.style.padding = "0px";
+    document.body.style.margin = "0px";
+  }*/
+
+
+
+
+
   useEffect(() => {
     const kinetic = new SceneInit("text");
     kinetic.initialize();
     kinetic.animate();
-    kinetic.camera.position.z = 33;
+    kinetic.camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      1,
+      1000
+    );
+    kinetic.camera.position.z = 25;
+
+    kinetic.controls = new OrbitControls(kinetic.camera, kinetic.renderer.domElement);
     kinetic.controls.enableZoom = false;
-    kinetic.renderer.setSize(window.innerWidth/1.2, window.innerHeight/1.4);
+    kinetic.renderer.setSize(window.innerWidth/1.5, window.innerHeight/1.5);
+    
+    
+    
+
     const light = new THREE.AmbientLight(0xffffff);
     kinetic.scene.add(light);
 
-    const Torusgeometry = new THREE.TorusGeometry(10, 3);
+    const Torusgeometry = new THREE.TorusGeometry(12, 3);
 
     const texture = new THREE.TextureLoader().load(img, (texture) => {
       texture.minFilter = THREE.NearestFilter;
@@ -59,7 +98,7 @@ void main() {
       vertexShader: vertex,
       fragmentShader: fragment,
       uniforms: {
-        uTime: { value: 5},
+        uTime: { value: 5 },
         uTexture: { value: texture },
       },
       transparent: true,
@@ -67,15 +106,15 @@ void main() {
     });
 
     const torus = new THREE.Mesh(Torusgeometry, Torusmaterial);
-    torus.rotation.x=150
-    torus.rotation.y-=100
+    torus.rotation.x = 150;
+    torus.rotation.y -= 100;
+    torus.position.y = 2.5;
     kinetic.scene.add(torus);
 
     const animate = () => {
-
       requestAnimationFrame(animate);
       torus.rotation.z += 0.009;
-      render()
+      render();
     };
 
     let clock;

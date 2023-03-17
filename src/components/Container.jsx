@@ -9,12 +9,14 @@ const Container = () => {
     <div className="container__wrapper">
       <div className="row">
         <div className="container">
-          <div className="left">
+          <div className="left " data-aos="fade-right"  data-aos-once="true">
             <h1 className="title">Hey</h1>
             <h1 className="title blue">I'm Abde</h1>
             <p className="header__para">
-              I am a <b className="blue">computer science </b> student interested in <b className="blue"> learning</b> how to make
-              websites and incorporating <b className="blue click"> unusual concepts </b> into the web.
+              I am a <b className="blue">computer science </b> student
+              interested in <b className="blue"> learning</b> how to make
+              websites and incorporating{" "}
+              <b className="blue click"> unusual concepts </b> into the web.
             </p>
             <div className="social__list">
               <a
@@ -36,7 +38,7 @@ const Container = () => {
               </a>
             </div>
           </div>
-          <div className="right">
+          <div className="right" data-aos="fade-up"  data-aos-once="true">
             <Kinetic />
           </div>
         </div>

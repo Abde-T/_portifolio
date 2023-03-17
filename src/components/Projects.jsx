@@ -10,11 +10,11 @@ function Projects() {
     <section className="projects">
       <div className="row">
         <div className="projects__wrapper">
-          <h2 className="proj__header">
+          <h1 className="proj__header" data-aos="fade-up"  data-aos-once="true">
             Here are some of my <span className="blue">projects:</span>{" "}
-          </h2>
+          </h1>
           <div className="project__list">
-            <div className="project">
+            <div className="project" data-aos="fade-left"  data-aos-once="true">
               <div className="project__wrapper">
                 <img src={fakeshop} className="project__img" alt="" />
                 <div className="project_wrapper--bg"></div>
@@ -49,7 +49,7 @@ function Projects() {
                 </div>
               </div>
             </div>
-            <div className="project">
+            <div className="project" data-aos="fade-right"  data-aos-once="true">
               <div className="project__wrapper">
                 <img src={movieheaven} className="project__img" alt="" />
                 <div className="project_wrapper--bg"></div>
@@ -84,7 +84,7 @@ function Projects() {
                 </div>
               </div>
             </div>
-            <div className="project">
+            <div className="project" data-aos="fade-up"  data-aos-once="true">
               <div className="project__wrapper">
                 <img src={img} className="project__img" alt="" />
                 <div className="project_wrapper--bg"></div>

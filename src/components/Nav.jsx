@@ -2,10 +2,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import Modal from "./Modal";
+import ReactSwitch from "react-switch";
 
-function Nav() {
+
+function Nav({toggleTheme, theme}) {
   const [openMomdal, setOpenModal] = useState(false);
 
+  
   return (
     <div className="nav__wrapper">
       <div className="row">
@@ -17,11 +20,11 @@ function Nav() {
             <li className="nav__link">
               <a
                
-                className="nav__link link__hover-effect link__hover-effect--black "
-                onClick={() => {
-                  setOpenModal(true);
+               className="nav__link link__hover-effect link__hover-effect--black "
+               onClick={() => {
+                 setOpenModal(true);
                 }}
-              >
+                >
                 About
               </a>
             </li>
@@ -29,7 +32,7 @@ function Nav() {
               <a
                 href=".projects"
                 className="displ__none nav__link link__hover-effect link__hover-effect--black"
-              >
+                >
                 Projects
               </a>
             </li>
@@ -39,14 +42,15 @@ function Nav() {
                 onClick={() => {
                   setOpenModal(true);
                 }}
-              >
+                >
                 Contact
               </a>
               {openMomdal && <Modal closeModal={setOpenModal} />}
             </li>
-            <li className="nav__link click">
+            <li className="nav__link switch click">
               <a href="#" className="nav__link ">
-                <FontAwesomeIcon icon="fa-adjust" />
+                {/*<FontAwesomeIcon icon="fa-adjust" />*/}
+                <ReactSwitch width={50} height={20} offColor={"#242424"} onColor={"#0077ff"} uncheckedIcon= {false} checkedIcon = {false} onChange={toggleTheme} checked={theme === "dark"}/>
               </a>
             </li>
           </ul>
