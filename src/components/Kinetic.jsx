@@ -6,48 +6,22 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 
 function Kinetic() {
-  /*let cnv;
-
-  window.onload = function () {
-    console.log("loading");
-    cnv = document.getElementById("text");
-    resizeCanvas();
-    prepareDocument();
-  };
-  window.onresize = function () {
-    console.log("easize");
-    resizeCanvas();
-  };
-  function resizeCanvas() {
-    cnv.width = window.innerWidth;
-    cnv.height = window.innerHeight;
-  }
-  function prepareDocument() {
-    document.body.style.padding = "0px";
-    document.body.style.margin = "0px";
-  }*/
-
-
-
-
 
   useEffect(() => {
     const kinetic = new SceneInit("text");
     kinetic.initialize();
     kinetic.animate();
     kinetic.camera = new THREE.PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight,
+      76,
+      window.innerWidth/ window.innerHeight,
       1,
       1000
     );
-    kinetic.camera.position.z = 25;
+    kinetic.camera.position.z = 30;
 
     kinetic.controls = new OrbitControls(kinetic.camera, kinetic.renderer.domElement);
     kinetic.controls.enableZoom = false;
-    kinetic.renderer.setSize(window.innerWidth/1.5, window.innerHeight/1.5);
-    
-    
+    kinetic.renderer.setSize(window.innerWidth, window.innerHeight/2);
     
 
     const light = new THREE.AmbientLight(0xffffff);
@@ -111,26 +85,25 @@ void main() {
     torus.position.y = 2.5;
     kinetic.scene.add(torus);
 
-    const animate = () => {
+    function animate(time){
+      time *= 0.001;
       requestAnimationFrame(animate);
       torus.rotation.z += 0.009;
-      render();
+      kinetic.renderer.render(kinetic.scene, kinetic.camera);
+      Torusmaterial.uniforms.uTime.value = clock.getElapsedTime();
+      
     };
 
     let clock;
     clock = new THREE.Clock();
 
-    function render() {
-      Torusmaterial.uniforms.uTime.value = clock.getElapsedTime();
-      kinetic.renderer.render(kinetic.scene, kinetic.camera);
-    }
-    animate();
+    requestAnimationFrame(animate);
   }, []);
 
   return (
-    <div>
+    <>
       <canvas id="text"></canvas>
-    </div>
+    </>
   );
 }
 

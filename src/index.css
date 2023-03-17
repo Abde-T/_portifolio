@@ -33,6 +33,11 @@ section {
   width: 100%;
   scroll-snap-align: center;
 }
+canvas { 
+  width: 100%; 
+  height: 100%; 
+}
+
 .row {
   width: 100%;
   max-width: 1400px;
@@ -137,8 +142,16 @@ a {
   width: 50%;
 }
 .right {
+  position: relative;
   z-index: 1;
   width: 50%;
+}
+#text {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
 }
 .title {
   font-size: 120px;
@@ -153,13 +166,6 @@ a {
 }
 .blue {
   color: #0077ff;
-}
-#text {
-  z-index: 1;
-  position: absolute;
-  top: 50%;
-  right: -30%;
-  transform: translate(-50%, -50%);
 }
 .tech {
   position: relative;
@@ -464,6 +470,11 @@ button {
   animation: spinner 750ms infinite linear;
   z-index: 100;
 }
+#bg{
+  position: fixed;
+    top: 0;
+    left: 0;
+}
 
 @keyframes spinner {
   0% {
@@ -531,7 +542,7 @@ button {
   }
   #text {
     top: 70%;
-    right: -20%;
+    left: 50%;
   }
   .tech__wrapper {
     margin-top: 50px;
@@ -573,5 +584,8 @@ button {
   }
   .proj__header {
     font-size: 25px;
+  }
+  .nav__link{
+    margin: 0 5px;
   }
 }

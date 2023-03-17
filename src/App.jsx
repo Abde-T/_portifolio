@@ -6,6 +6,7 @@ import Tech from './components/Tech';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+
 export const ThemeContext = createContext(null)
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
   return (
 
    <ThemeContext.Provider value={{theme, toggleTheme}}>
+  
    <div className="App" id={theme}>
    <Landing theme ={theme} toggleTheme={toggleTheme}/>
    <Tech />
