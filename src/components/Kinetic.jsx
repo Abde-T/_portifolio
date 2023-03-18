@@ -17,11 +17,11 @@ function Kinetic() {
       1,
       1000
     );
-    kinetic.camera.position.z = 30;
+    kinetic.camera.position.z = 25;
 
     kinetic.controls = new OrbitControls(kinetic.camera, kinetic.renderer.domElement);
     kinetic.controls.enableZoom = false;
-    kinetic.renderer.setSize(window.innerWidth, window.innerHeight/2);
+    kinetic.renderer.setSize(window.innerWidth/1.8, window.innerHeight/1.3);
     
 
     const light = new THREE.AmbientLight(0xffffff);
@@ -81,8 +81,7 @@ void main() {
 
     const torus = new THREE.Mesh(Torusgeometry, Torusmaterial);
     torus.rotation.x = 150;
-    torus.rotation.y -= 100;
-    torus.position.y = 2.5;
+    torus.rotation.y -= 128;
     kinetic.scene.add(torus);
 
     function animate(time){
@@ -102,7 +101,7 @@ void main() {
 
   return (
     <>
-      <canvas id="text"></canvas>
+      <canvas id="text" className="displ__none"></canvas>
     </>
   );
 }

@@ -86,7 +86,7 @@ function Ball(props) {
 
   return (
     <div>
-      <canvas id="ball"></canvas>
+      <canvas id="ball" className="displ__none"></canvas>
     </div>
   );
 }

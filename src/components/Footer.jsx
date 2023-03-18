@@ -7,9 +7,14 @@ function Footer(props) {
   return (
     <footer>
       <div className="row footer__wrapper">
+        <a href="#" className="footer__anchor">
         <figure>
           <img className="footer__logo--img" src={logo} alt="" />
         </figure>
+        <span className="footer__logo--up">
+            Top ↑
+          </span>
+        </a>
         <div className="footer__social--list">
           <a
             href="#"

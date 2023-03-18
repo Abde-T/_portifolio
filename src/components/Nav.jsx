@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import Modal from "./Modal";
@@ -27,7 +26,7 @@ function Nav({ toggleTheme, theme }) {
             </li>
             <li className="nav__link">
               <a
-                href=".projects"
+                href="#projects"
                 className="displ__none nav__link link__hover-effect link__hover-effect--black"
               >
                 Projects

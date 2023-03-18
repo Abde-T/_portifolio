@@ -7,7 +7,7 @@ import github from "../assets/github.png";
 
 function Projects() {
   return (
-    <section className="projects">
+    <section id="projects">
       <div className="row">
         <div className="projects__wrapper">
           <h1 className="proj__header" data-aos="fade-up"  data-aos-once="true">
