@@ -8,10 +8,10 @@ const Container = () => {
   return (
     <div className="container__wrapper">
       <div className="row">
-        <div className="container">
+        <div className="container-">
           <div className="left " data-aos="fade-right"  data-aos-once="true">
-            <h1 className="title">Hey</h1>
-            <h1 className="title blue">I'm Abde</h1>
+            <h1 className="title-">Hey</h1>
+            <h1 className="title- blue">I'm Abde</h1>
             <p className="header__para">
               I am a <b className="blue">computer science </b> student
               interested in <b className="blue"> learning</b> how to make
