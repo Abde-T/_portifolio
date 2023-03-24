@@ -34,7 +34,7 @@ const Container = () => {
                 target="_blank"
                 className="social__link click"
               >
-                <FontAwesomeIcon icon="fa-file-pdf" />
+                <FontAwesomeIcon icon="fa-file-pdf" className="ic__img" />
               </a>
             </div>
           </div>

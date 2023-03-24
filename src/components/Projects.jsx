@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../assets/blinker mockup.png";
+import game from "../assets/game.png";
 import movieheaven from "../assets/movieHeaven.png";
 import fakeshop from "../assets/fakeShop.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -44,8 +44,8 @@ function Projects() {
                 <div id="card">
                   <p id="prompt">
                     {" "}
-                    Fake shop Project
                     <h4 className="project__description--sub-title">
+                    Fake shop Project: <br />
                       Html, Css, JavaScript, React
                     </h4>
                   </p>
@@ -106,8 +106,8 @@ function Projects() {
                 <div id="card">
                   <p id="prompt">
                     {" "}
-                    Movie heaven Project
                     <h4 className="project__description--sub-title">
+                    Movie heaven Project: <br />
                       Html, Css, JavaScript, React
                     </h4>
                   </p>
@@ -169,12 +169,12 @@ function Projects() {
                 <div id="card">
                   <p id="prompt">
                     {" "}
-                    Car Sales Project
-                    <h4 className="project__description--sub-title">
+                    <h4 className="project__description--sub-title"> Car Sales Project:
+                    <br />
                       Html, Css, JavaScript, React
                     </h4>
                   </p>
-                  <img src={img} className="project__img" alt="" />
+                  <img src={game} className="project__img" alt="" />
                   <div className="title">
                     <div className="project__description--para">
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
