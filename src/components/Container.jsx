@@ -20,18 +20,18 @@ const Container = () => {
             </p>
             <div className="social__list">
               <a
-                href="www.linkedin"
-                target="_blank"
+                href="https://github.com/Abde-T"
+                target={"_blank"}
                 className="social__link click"
               >
                 <img src={github} alt="" className="ic__img" />
               </a>
-              <a href="github." target="_blank" className="social__link click">
+              <a href="https://www.linkedin.com/in/abderrahmane-tiamani-911b48266/" target={"_blank"} className="social__link click">
                 <img src={linkedin} alt="" className="ic__img" />
               </a>
               <a
                 href="./assets/Resume.pdf"
-                target="_blank"
+                target={"_blank"}
                 className="social__link click"
               >
                 <FontAwesomeIcon icon="fa-file-pdf" className="ic__img" />

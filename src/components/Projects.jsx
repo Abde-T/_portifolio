@@ -14,7 +14,11 @@ function Projects() {
             Here are some of my <span className="blue">projects:</span>{" "}
           </h1>
           <div className="project__list">
-            <div className="container noselect">
+            <div
+              className="container noselect"
+              data-aos="fade-right"
+              data-aos-once="true"
+            >
               <div className="canvas">
                 <div className="tracker tr-1"></div>
                 <div className="tracker tr-2"></div>
@@ -42,13 +46,13 @@ function Projects() {
                 <div className="tracker tr-24"></div>
                 <div className="tracker tr-25"></div>
                 <div id="card">
-                  <p id="prompt">
-                    {" "}
-                    <h4 className="project__description--sub-title">
-                    Fake shop Project: <br />
+                  <div id="prompt">
+                    <p className="project__description--sub-title">
+                      <span className="blue"> Fake shop</span>
+                      <br />
                       Html, Css, JavaScript, React
-                    </h4>
-                  </p>
+                    </p>
+                  </div>
                   <img src={fakeshop} className="project__img" alt="" />
                   <div className="title">
                     <div className="project__description--para">
@@ -58,14 +62,14 @@ function Projects() {
                     <div>
                       <a
                         href="https://github.com/Abde-T/Fake-shop"
-                        className="project__description--link"
                         target={"_blank"}
+                        className="project__description--link click"
                       >
                         <img src={github} alt="" className="ic__img" />
                       </a>
                       <a
                         href="https://fake-shop-three.vercel.app/"
-                        className="project__description--link"
+                        className="project__description--link click"
                         target={"_blank"}
                       >
                         <FontAwesomeIcon icon="fa-link" className="ic__img" />
@@ -76,7 +80,11 @@ function Projects() {
               </div>
             </div>
 
-            <div className="container noselect">
+            <div
+              className="container noselect"
+              data-aos="fade-up"
+              data-aos-once="true"
+            >
               <div className="canvas">
                 <div className="tracker tr-1"></div>
                 <div className="tracker tr-2"></div>
@@ -104,13 +112,14 @@ function Projects() {
                 <div className="tracker tr-24"></div>
                 <div className="tracker tr-25"></div>
                 <div id="card">
-                  <p id="prompt">
+                  <div id="prompt">
                     {" "}
-                    <h4 className="project__description--sub-title">
-                    Movie heaven Project: <br />
+                    <p className="project__description--sub-title">
+                      <span className="blue"> Movie heaven </span>
+                      <br />
                       Html, Css, JavaScript, React
-                    </h4>
-                  </p>
+                    </p>
+                  </div>
                   <img src={movieheaven} className="project__img" alt="" />
                   <div className="title">
                     <div className="project__description--para">
@@ -121,14 +130,14 @@ function Projects() {
                     <div>
                       <a
                         href="https://github.com/Abde-T/movie-heaven"
-                        className="project__description--link"
+                        className="project__description--link click"
                         target={"_blank"}
                       >
                         <img src={github} alt="" className="ic__img" />
                       </a>
                       <a
                         href="https://movie-heaven.vercel.app/"
-                        className="project__description--link"
+                        className="project__description--link click"
                         target={"_blank"}
                       >
                         <FontAwesomeIcon icon="fa-link" className="ic__img" />
@@ -139,7 +148,11 @@ function Projects() {
               </div>
             </div>
 
-            <div className="container noselect">
+            <div
+              className="container noselect"
+              data-aos="fade-left"
+              data-aos-once="true"
+            >
               <div className="canvas">
                 <div className="tracker tr-1"></div>
                 <div className="tracker tr-2"></div>
@@ -167,25 +180,33 @@ function Projects() {
                 <div className="tracker tr-24"></div>
                 <div className="tracker tr-25"></div>
                 <div id="card">
-                  <p id="prompt">
+                  <div id="prompt">
                     {" "}
-                    <h4 className="project__description--sub-title"> Car Sales Project:
-                    <br />
-                      Html, Css, JavaScript, React
-                    </h4>
-                  </p>
+                    <p className="project__description--sub-title">
+                      <span className="blue"> open world game </span>
+                      <br />
+                      React three fiber, React three canon
+                    </p>
+                  </div>
                   <img src={game} className="project__img" alt="" />
                   <div className="title">
                     <div className="project__description--para">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Nulla, similique unde! Repellendus ipsam iure voluptatibus
-                      ex quaerat facere est libero!
+                      A simple open world game made with react React three
+                      fiber, and React three canon physics engine.
                     </div>
-                    <div>
-                      <a href="" className="project__description--link">
+                    <div >
+                      <a
+                        href="https://github.com/Abde-T/car-game"
+                        target={"_blank"}
+                        className="project__description--link click"
+                      >
                         <img src={github} alt="" className="ic__img" />
                       </a>
-                      <a href="" className="project__description--link">
+                      <a
+                        href="https://car-game-sigma.vercel.app/"
+                        target={"_blank"}
+                        className="project__description--link click"
+                      >
                         <FontAwesomeIcon icon="fa-link" className="ic__img" />
                       </a>
                     </div>
