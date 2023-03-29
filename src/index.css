@@ -228,7 +228,7 @@ a {
   transform: translate(-50%, -50%);
 }
 #ball {
-  z-index: 100;
+  z-index: 10;
   position: absolute;
   top: 110%;
   right: 0;
