@@ -27,8 +27,8 @@ function Ball(props) {
     window.addEventListener("resize", () => onWindowResize(), false);
     
     function onWindowResize() {
-      ball.camera.aspect = 300 / 100;
-      ball.camera.position.z = 6.5;
+      ball.camera.aspect = 500 / 200;
+      ball.camera.position.z = 5;
       ball.camera.updateProjectionMatrix();
       ball.renderer.setSize(window.innerWidth, window.innerHeight/3);
     }

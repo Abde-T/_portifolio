@@ -12,24 +12,24 @@ function Kinetic() {
     kinetic.initialize();
     kinetic.animate();
     kinetic.camera = new THREE.PerspectiveCamera(
-      76,
-      window.innerWidth/ window.innerHeight,
+      70,
+      1200/ 500,
       1,
       1000
     );
-    kinetic.camera.position.z = 25;
+    kinetic.camera.position.z = 28;
 
     kinetic.controls = new OrbitControls(kinetic.camera, kinetic.renderer.domElement);
     kinetic.controls.enableZoom = false;
 
-    kinetic.renderer.setSize(1200, 700);
+    kinetic.renderer.setSize(1000, 600);
 
     window.addEventListener("resize", () => onWindowResize(), false);
     
     function onWindowResize() {
       kinetic.camera.aspect = 300 / 150;
       kinetic.camera.updateProjectionMatrix();
-      kinetic.renderer.setSize(window.innerWidth, window.innerHeight/2.2);
+      kinetic.renderer.setSize(800, 400);
     }
 
     const light = new THREE.AmbientLight(0xffffff);
@@ -88,14 +88,14 @@ void main() {
     });
 
     const torus = new THREE.Mesh(Torusgeometry, Torusmaterial);
-    torus.rotation.x = 150;
-    torus.rotation.y -= 128;
+    torus.rotation.x = 140.5;
+    torus.rotation.y = 40;
     kinetic.scene.add(torus);
 
     function animate(time){
       time *= 0.001;
       requestAnimationFrame(animate);
-      torus.rotation.z += 0.009;
+      torus.rotation.z += 0.005;
       kinetic.renderer.render(kinetic.scene, kinetic.camera);
       Torusmaterial.uniforms.uTime.value = clock.getElapsedTime();
       

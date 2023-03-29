@@ -229,7 +229,7 @@ a {
   transform: translate(-50%, -50%);
 }
 #ball {
-  z-index: 10;
+  z-index: 2;
   position: absolute;
   top: 110%;
   right: 0;
@@ -378,6 +378,7 @@ margin-top: 30px;
   transform: scale(0.8);
 }
 
+
 .form__item {
   margin-bottom: 20px;
 }
@@ -458,11 +459,13 @@ button {
 .modal__overlay--failed {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #242424;
   font-size: 30px;
   background-color: #ffffff;
   font-weight: 700;
-  padding: 20px;
+  padding: 30px;
 }
 .success{
   margin-bottom: 50px;
@@ -741,24 +744,15 @@ button {
 
 }
 @media (max-width: 988px) {
-  .title-{
-    display: inline;
-    margin: 0 30px 0 0; 
-  }
-
-  .left{
-    width: 100%;
-    margin-top: -300px;
-  }
   .header__para{
-    max-width: 80%;
+    max-width: 100%;
   }
-  .title {
+  .title- {
     font-size: 80px;
   }
   #text {
-    top: 77%;
-    left: 50%;
+    top: 50%;
+    left:75%;
   }
 }
 
@@ -783,16 +777,15 @@ button {
     font-size: 50px;
   }
   .header__para{
+    max-width: 80%;
     font-size: 22px;
     font-weight: 400;
   }
   .left {
-    margin-top: -200px;
     width: 100%;
   }
   #text {
-    top: 80%;
-    left: 50%;
+    display: none;
   }
 
   .tech__wrapper {
@@ -802,7 +795,9 @@ button {
 }
 
 @media (max-width: 580px) {
- 
+  .header__para{
+    max-width: 100%;
+  }
   .project__description {
     left: 0;
     padding: 0;

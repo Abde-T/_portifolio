@@ -139,7 +139,7 @@ function Modal({ closeModal }) {
           <div className="modal__overlay modal__overlay--failed">
             <FontAwesomeIcon icon='circle-exclamation' className="failed"/>
             The email service is temporarily unavalible. Please contact me
-            diractly on <span className="blue"> tiamani3939@gmail.com </span> 
+            diractly on " tiamani3939@gmail.com "
           </div>
         </div>
       </div>
