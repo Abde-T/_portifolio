@@ -28,7 +28,7 @@ export default class SceneInit {
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(
       this.fov,
-      window.innerWidth / window.innerHeight,
+      500 / 500,
       1,
       1000
     );
@@ -42,7 +42,7 @@ export default class SceneInit {
       antialias: true,
       alpha: true,
     });
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setSize(500, 500);
     document.body.appendChild(this.renderer.domElement);
 
     this.clock = new THREE.Clock();
@@ -89,9 +89,9 @@ export default class SceneInit {
   }
 
   onWindowResize() {
-    this.camera.aspect = window.innerWidth / window.innerHeight;
+    this.camera.aspect = window.innerWidth/window.innerHeight;
     this.camera.updateProjectionMatrix();
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setSize(1000, window.innerHeight/2);
   }
 
   init() {

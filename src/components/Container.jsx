@@ -38,7 +38,7 @@ const Container = () => {
               </a>
             </div>
           </div>
-          <div className="right" data-aos="fade-up"  data-aos-once="true">
+          <div data-aos="fade-up"  data-aos-once="true">
             <Kinetic />
           </div>
         </div>

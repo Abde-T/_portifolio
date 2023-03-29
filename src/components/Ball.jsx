@@ -15,15 +15,26 @@ function Ball(props) {
     ball.animate();
     ball.camera = new THREE.PerspectiveCamera(
       40,
-      window.innerWidth*1.5 / window.innerHeight*2,
+      1000 / 100,
       1,
       1000
     );
     ball.camera.position.z = 5;
    //ball.controls = new OrbitControls(ball.camera, ball.renderer.domElement);
     //ball.controls.enableZoom = false;
-    ball.renderer.setSize(window.innerWidth, window.innerHeight/2.9);
-    const light = new THREE.AmbientLight(0xffffff);
+    ball.renderer.setSize(window.innerWidth, window.innerHeight/4);
+  
+    window.addEventListener("resize", () => onWindowResize(), false);
+    
+    function onWindowResize() {
+      ball.camera.aspect = 300 / 100;
+      ball.camera.position.z = 6.5;
+      ball.camera.updateProjectionMatrix();
+      ball.renderer.setSize(window.innerWidth, window.innerHeight/3);
+    }
+  
+  
+    const light = new THREE.AmbientLight(0xffffff);  
     ball.scene.add(light);
 
 
@@ -86,7 +97,7 @@ function Ball(props) {
 
   return (
     <div>
-      <canvas id="ball" className="displ__none"></canvas>
+      <canvas id="ball" ></canvas>
     </div>
   );
 }

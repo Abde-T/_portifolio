@@ -21,8 +21,16 @@ function Kinetic() {
 
     kinetic.controls = new OrbitControls(kinetic.camera, kinetic.renderer.domElement);
     kinetic.controls.enableZoom = false;
-    kinetic.renderer.setSize(window.innerWidth/1.8, window.innerHeight/1.3);
+
+    kinetic.renderer.setSize(1200, 700);
+
+    window.addEventListener("resize", () => onWindowResize(), false);
     
+    function onWindowResize() {
+      kinetic.camera.aspect = 300 / 150;
+      kinetic.camera.updateProjectionMatrix();
+      kinetic.renderer.setSize(window.innerWidth, window.innerHeight/2.2);
+    }
 
     const light = new THREE.AmbientLight(0xffffff);
     kinetic.scene.add(light);
@@ -101,7 +109,7 @@ void main() {
 
   return (
     <>
-      <canvas id="text" className="displ__none"></canvas>
+      <canvas id="text" ></canvas>
     </>
   );
 }

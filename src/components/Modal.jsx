@@ -1,6 +1,12 @@
 import React, { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import emailjs from "@emailjs/browser";
+import css1 from "../assets/tech/css1.png";
+import html1 from "../assets/tech/html1.png";
+import js from "../assets/tech/js.png";
+import react from "../assets/tech/react.png";
+import three from "../assets/tech/three.png";
+
 
 function Modal({ closeModal }) {
   const form = useRef();
@@ -54,6 +60,40 @@ function Modal({ closeModal }) {
             Quia neque debitis similique ex, maiores optio cum exercitationem.
             Ut ab ducimus voluptate blanditiis?
           </p>
+          <div
+            className="language__list "
+          >
+            <div className="language">
+              <figure className="language__img--wrapper">
+                <img src={html1} alt="" className="language__img" />
+              </figure>
+              <span className="language__name"> HTML</span>
+            </div>
+            <div className="language">
+              <figure className="language__img--wrapper">
+                <img src={css1} alt="" className="language__img" />
+              </figure>
+              <span className="language__name"> CSS</span>
+            </div>
+            <div className="language">
+              <figure className="language__img--wrapper">
+                <img src={js} alt="" className="language__img" />
+              </figure>
+              <span className="language__name"> JavaScript</span>
+            </div>
+            <div className="language">
+              <figure className="language__img--wrapper">
+                <img src={react} alt="" className="language__img" />
+              </figure>
+              <span className="language__name"> Reactjs</span>
+            </div>
+            <div className="language">
+              <figure className="language__img--wrapper">
+                <img src={three} alt="" className="language__img" />
+              </figure>
+              <span className="language__name"> Threejs</span>
+            </div>
+          </div>
         </div>
         <div
           className="modal__half modal__contact"
