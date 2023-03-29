@@ -133,11 +133,13 @@ function Modal({ closeModal }) {
             <FontAwesomeIcon icon="fa-spinner" className="spinner" />
           </div>
           <div className="modal__overlay modal__overlay--success">
-            "Thanks for the message! Looking forward to speaking to you soon."
+          <FontAwesomeIcon icon='circle-exclamation' className="success"/>
+            Thanks for the message! Looking forward to speaking to you soon.
           </div>
           <div className="modal__overlay modal__overlay--failed">
-            "The email service is temporarily unavalible. Please contact me
-            diractly on tiamani3939@gmail.com"
+            <FontAwesomeIcon icon='circle-exclamation' className="failed"/>
+            The email service is temporarily unavalible. Please contact me
+            diractly on <span className="blue"> tiamani3939@gmail.com </span> 
           </div>
         </div>
       </div>

@@ -9,9 +9,10 @@ import {
   faFilePdf,
   faSpinner,
   faTimes,
-  faArrowUp
+  faArrowUp,
+  faCircleExclamation
 } from "@fortawesome/free-solid-svg-icons";
-library.add(faLink,faAdjust,faFilePdf, faSpinner, faTimes, faArrowUp);
+library.add(faLink,faCircleExclamation, faAdjust,faFilePdf, faSpinner, faTimes, faArrowUp);
 
 
 
