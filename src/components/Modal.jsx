@@ -6,6 +6,8 @@ import html1 from "../assets/tech/html1.png";
 import js from "../assets/tech/js.png";
 import react from "../assets/tech/react.png";
 import three from "../assets/tech/three.png";
+import ts1 from "../assets/tech/ts1.png";
+import next1 from "../assets/tech/next1.png";
 
 
 function Modal({ closeModal }) {
@@ -50,15 +52,12 @@ function Modal({ closeModal }) {
             Here's a bit about me.
           </h3>
           <h4 className="modal__sub-title modal__sub-title--about">
-            {" "}
             Frontend software engeneer.
           </h4>
           <p className="modal__para">
-            Lorem ipsum dolor sit <b className="blue">amet consectetur</b>{" "}
-            adipisicing elit. Nobis explicabo itaque minima alias Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Aut illo dolore fugit.
-            Quia neque debitis similique ex, maiores optio cum exercitationem.
-            Ut ab ducimus voluptate blanditiis?
+            My name is Abderrahmane Tiamani a <b className="blue"> computer scince graduate </b>
+            and a self tought <b className="blue"> frontend developer </b>. I have a big
+            interest in learning new tech
           </p>
           <div
             className="language__list "
@@ -93,10 +92,22 @@ function Modal({ closeModal }) {
               </figure>
               <span className="language__name"> Threejs</span>
             </div>
+            <div className="language">
+              <figure className="language__img--wrapper">
+                <img src={ts1} alt="" className="language__img" />
+              </figure>
+              <span className="language__name"> TypeScript</span>
+            </div>
+            <div className="language">
+              <figure className="language__img--wrapper">
+                <img src={next1} alt="" className="language__img" />
+              </figure>
+              <span className="language__name"> Nextjs</span>
+            </div>
           </div>
         </div>
         <div
-          className="modal__half modal__contact"
+          className="modal__half modal__contact "
           data-aos="fade-left"
           data-aos-once="true"
         >
