@@ -9,7 +9,6 @@ import three from "../assets/tech/three.png";
 import ts1 from "../assets/tech/ts1.png";
 import next1 from "../assets/tech/next1.png";
 
-
 function Modal({ closeModal }) {
   const form = useRef();
 
@@ -42,26 +41,26 @@ function Modal({ closeModal }) {
 
   return (
     <div className="modal">
-        <div className="modal__wrapper">
+      <div className="modal__wrapper">
         <div
           className="modal__half modal__about"
           data-aos="fade-right"
           data-aos-once="true"
         >
-          <h3 className="modal__title modal__title--about">
+          <h3 className="modal__title modal__title--about modal__white">
             Here's a bit about me.
           </h3>
-          <h4 className="modal__sub-title modal__sub-title--about">
+          <h4 className="modal__sub-title modal__sub-title--abou modal__white">
             Frontend software engeneer.
           </h4>
-          <p className="modal__para">
-            My name is Abderrahmane Tiamani a <b className="blue"> computer scince graduate </b>
-            and a self tought <b className="blue"> frontend developer </b>. I have a big
-            interest in learning new tech
+          <p className="modal__para modal__white">
+            My name is Abderrahmane Tiamani, a{" "}
+            <b className="blue"> computer science </b> graduate and a
+            self-taught <b className="blue"> frontend developer </b>. I have a
+            great attraction to learning new tech and a keen interest in adding
+            3D elements to the web.
           </p>
-          <div
-            className="language__list "
-          >
+          <div className="language__list ">
             <div className="language">
               <figure className="language__img--wrapper">
                 <img src={html1} alt="" className="language__img" />
@@ -130,7 +129,12 @@ function Modal({ closeModal }) {
             </div>
             <div className="form__item">
               <label className="form__item--lable">Email</label>
-              <input className="input" name="email" type="email"></input>
+              <input
+                className="input"
+                name="email"
+                type="email"
+                required
+              ></input>
             </div>
             <div className="form__item">
               <label className="form__item--lable">Massage</label>
@@ -144,11 +148,10 @@ function Modal({ closeModal }) {
             <FontAwesomeIcon icon="fa-spinner" className="spinner" />
           </div>
           <div className="modal__overlay modal__overlay--success">
-          <FontAwesomeIcon icon='circle-exclamation' className="success"/>
+            <FontAwesomeIcon icon="circle-exclamation" className="success" />
             Thanks for the message! Looking forward to speaking to you soon.
           </div>
           <div className="modal__overlay modal__overlay--failed">
-            <FontAwesomeIcon icon='circle-exclamation' className="failed"/>
             The email service is temporarily unavalible. Please contact me
             diractly on " tiamani3939@gmail.com "
           </div>

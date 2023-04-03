@@ -18,7 +18,12 @@ function Projects() {
               <div className="content">
                 <div className="back">
                   <div className="back-content">
-                    <img src={fakeshop} className="project__img" alt="" />
+                    <img
+                      src={fakeshop}
+                      className="project__img"
+                      alt=""
+                      loading="lazy"
+                    />
                     <strong>
                       <span className="blue"> Fake shop</span>
                     </strong>
@@ -35,8 +40,8 @@ function Projects() {
                   <div className="front-content">
                     <small className="badge">
                       <div className="project__description--para">
-                        An E-Commerce website built using React. Makes use of
-                        API calss, and includes a responsive and interactive
+                        An E-Commerce website built using React. It Makes use of
+                        API calls, and includes a responsive and interactive
                         design.
                       </div>
                     </small>
@@ -57,7 +62,7 @@ function Projects() {
                           >
                             <FontAwesomeIcon
                               icon="fa-link"
-                              className="ic__img-"
+                              className="ic__img--"
                             />
                           </a>
                         </div>
@@ -72,7 +77,12 @@ function Projects() {
               <div className="content">
                 <div className="back">
                   <div className="back-content">
-                    <img src={movieheaven} className="project__img" alt="" />
+                    <img
+                      src={movieheaven}
+                      className="project__img"
+                      alt=""
+                      loading="lazy"
+                    />
                     <strong>
                       {" "}
                       <span className="blue"> Movie heaven </span>{" "}
@@ -93,7 +103,7 @@ function Projects() {
                       {" "}
                       <div className="project__description--para">
                         A web application that fetches and displays movies using
-                        OMdbapi The website includes search bar, and a
+                        OMdbapi, The website, includes search bar and a
                         responsive and interactive design.
                       </div>
                     </small>
@@ -114,7 +124,7 @@ function Projects() {
                           >
                             <FontAwesomeIcon
                               icon="fa-link"
-                              className="ic__img-"
+                              className="ic__img--"
                             />
                           </a>
                         </div>
@@ -129,7 +139,12 @@ function Projects() {
               <div className="content">
                 <div className="back">
                   <div className="back-content">
-                    <img src={game} className="project__img" alt="" />
+                    <img
+                      src={game}
+                      className="project__img"
+                      loading="lazy"
+                      alt=""
+                    />
                     <strong>
                       <span className="blue"> open world game </span>
                     </strong>
@@ -148,8 +163,8 @@ function Projects() {
                     <small className="badge">
                       {" "}
                       <div className="project__description--para">
-                        A simple open world game made with React three fiber,
-                        and React three canon physics engine.
+                        A simple open world-game made with React three fiber
+                        and cannon.js physics engine.
                       </div>
                     </small>
                     <div className="description">
@@ -169,7 +184,7 @@ function Projects() {
                           >
                             <FontAwesomeIcon
                               icon="fa-link"
-                              className="ic__img-"
+                              className="ic__img--"
                             />
                           </a>
                         </div>

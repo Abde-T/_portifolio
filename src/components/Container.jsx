@@ -9,14 +9,14 @@ const Container = () => {
     <div className="container__wrapper">
       <div className="row">
         <div className="container-">
-          <div className="left " data-aos="fade-right"  data-aos-once="true">
+          <div className="left " data-aos="fade-right" data-aos-once="true">
             <h1 className="title-">Hey</h1>
             <h1 className="title- blue">I'm Abde</h1>
             <p className="header__para">
-              I am a <b className="blue">computer science </b> student
+              I am a <b className="blue">computer science </b> graduate
               interested in <b className="blue"> learning</b> how to make
               websites and incorporating{" "}
-              <b className="blue click"> unusual concepts </b> into the web.
+              <b className="blue"> unique concepts </b> into the web.
             </p>
             <div className="social__list">
               <a
@@ -26,7 +26,11 @@ const Container = () => {
               >
                 <img src={github} alt="" className="ic__img" />
               </a>
-              <a href="https://www.linkedin.com/in/abderrahmane-tiamani-911b48266/" target={"_blank"} className="social__link click">
+              <a
+                href="https://www.linkedin.com/in/abderrahmane-tiamani-911b48266/"
+                target={"_blank"}
+                className="social__link click"
+              >
                 <img src={linkedin} alt="" className="ic__img" />
               </a>
               <a
@@ -38,7 +42,7 @@ const Container = () => {
               </a>
             </div>
           </div>
-          <div data-aos="fade-up"  data-aos-once="true">
+          <div data-aos="fade-up" data-aos-once="true">
             <Kinetic />
           </div>
         </div>

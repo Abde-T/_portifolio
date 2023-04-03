@@ -17,13 +17,13 @@ function Footer(props) {
         </a>
         <div className="footer__social--list">
           <a
-            href="#"
+            href="https://github.com/Abde-T"
             className="footer__social--link link__hover-effect link__hover-effect--white"
           >
             Github
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/abderrahmane-tiamani-911b48266/"
             className="footer__social--link link__hover-effect link__hover-effect--white"
           >
             LinkdIn
@@ -39,7 +39,7 @@ function Footer(props) {
           </a>
           {openMomdal && <Modal closeModal={setOpenModal} />}
           <a
-            href="#"
+            href="./assets/Resume.pdf"
             className="footer__social--link link__hover-effect link__hover-effect--white"
           >
             Resume

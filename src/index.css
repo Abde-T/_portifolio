@@ -14,7 +14,7 @@ li {
   list-style: none;
 }
 #light {
-  background: linear-gradient(#d2d3d4f1 0%, rgb(79, 81, 87) 100%);
+  background: linear-gradient(#d2d3d4f1 0%, #4f5157 100%);
 }
 #dark {
   background: linear-gradient(rgb(64, 66, 70) 0%, rgba(1, 14, 51, 0.945) 100%);
@@ -27,7 +27,8 @@ li {
 #dark .title,
 #dark .header__para,
 #dark .language__name,
-#dark h1 {
+#dark h1,
+#dark .modal__white {
   color: white;
 }
 #dark .blue {
@@ -336,16 +337,19 @@ margin-top: 30px;
 .modal__about {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  background-color: #0505051a;
+  background-color: #07000034;
 }
 .modal__title {
-  font-size: 26px;
+  font-size: 30px;
 }
 .modal__sub-title {
   margin: 12px 0 24px 0;
-  font-size: 14px;
+  font-size: 20px;
 }
 .modal__para {
+  color: #242424;
+  font-weight: 800;
+  font-size: 20px;
   margin-bottom: 12px;
   line-height: 1.75;
 }
@@ -443,25 +447,24 @@ button {
   justify-content: center;
   z-index: -1;
 }
-
+.modal__overlay--visible{
+  z-index: 1;
+  display: flex;
+}
 .modal__overlay--loading {
   background-color: #ffffff;
   font-size: 80px;
 }
 
-.failed{
-  margin-bottom: 50px;
-  font-size: 100px;
-  filter:  invert(12%) sepia(77%) saturate(6902%) hue-rotate(3deg) brightness(113%) contrast(119%);;
-}
+
 .modal__overlay--failed {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #242424;
+  color: #ffffff;
   font-size: 30px;
-  background-color: #ac1e1e;
+  background-color: #ffffff;
   font-weight: 700;
   padding: 30px;
 
@@ -477,10 +480,10 @@ button {
   flex-direction: column;
   text-align: center;
   font-size: 30px;
-  background-color: #00ff88;
-  color: #ffffff;
+  background-color: #8be7aa;
+  color: #000000;
   font-weight: 700;
-  padding: 28px;
+  padding: 50px;
 
 }
 .spinner {
@@ -720,12 +723,30 @@ button {
   filter: invert();
 
 }
+.ic__img--{
+  width: 20px;
+  margin: 0 20px;
+  scale: 3;
+}
 .ic__img- {
   width: 20px;
   margin: 0 20px;
   scale: 2;
 }
+.sun, .moon{
+scale: 0.9;
 
+
+}
+.moon{
+  position: absolute;
+  right: 3px;
+}
+.sun{
+  filter: invert(1); 
+  position: absolute;
+  left: 0px;
+}
 
 
 

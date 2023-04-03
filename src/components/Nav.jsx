@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import Modal from "./Modal";
 import ReactSwitch from "react-switch";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Nav({ toggleTheme, theme }) {
   const [openMomdal, setOpenModal] = useState(false);
@@ -47,14 +48,20 @@ function Nav({ toggleTheme, theme }) {
               <a href="#" className="nav__link ">
                 {/*<FontAwesomeIcon icon="fa-adjust" />*/}
                 <ReactSwitch
-                  width={50}
+                  checkedHandleIcon={<FontAwesomeIcon icon="fa-moon" className="moon"/>}
+                  uncheckedHandleIcon={<FontAwesomeIcon icon="fa-sun" className="sun"/>}
+                  width={40}
                   height={20}
+                  borderRadius={10}
+                  offHandleColor={'#242424'}
+                  handleDiameter={0}
                   offColor={"#242424"}
-                  onColor={"#0077ff"}
+                  onColor={"#ffffff"}
                   uncheckedIcon={false}
                   checkedIcon={false}
                   onChange={toggleTheme}
                   checked={theme === "dark"}
+                  className={"check"}
                 />
               </a>
             </li>
