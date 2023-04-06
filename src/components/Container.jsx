@@ -3,6 +3,7 @@ import React from "react";
 import Kinetic from "./Kinetic";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
+import resume from "../assets/resume.pdf";
 
 const Container = () => {
   return (
@@ -34,7 +35,7 @@ const Container = () => {
                 <img src={linkedin} alt="" className="ic__img" />
               </a>
               <a
-                href="./assets/Resume.pdf"
+                href={resume}
                 target={"_blank"}
                 className="social__link click"
               >

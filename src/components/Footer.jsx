@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import Modal from "./Modal";
+import resume from "../assets/resume.pdf";
+
 function Footer(props) {
   const [openMomdal, setOpenModal] = useState(false);
 
@@ -17,13 +19,13 @@ function Footer(props) {
         </a>
         <div className="footer__social--list">
           <a
-            href="https://github.com/Abde-T"
+            href="https://github.com/Abde-T" target={"_blank"}
             className="footer__social--link link__hover-effect link__hover-effect--white"
           >
             Github
           </a>
           <a
-            href="https://www.linkedin.com/in/abderrahmane-tiamani-911b48266/"
+            href="https://www.linkedin.com/in/abderrahmane-tiamani-911b48266/" target={"_blank"}
             className="footer__social--link link__hover-effect link__hover-effect--white"
           >
             LinkdIn
@@ -39,7 +41,7 @@ function Footer(props) {
           </a>
           {openMomdal && <Modal closeModal={setOpenModal} />}
           <a
-            href="./assets/Resume.pdf"
+            href={resume}
             className="footer__social--link link__hover-effect link__hover-effect--white"
           >
             Resume

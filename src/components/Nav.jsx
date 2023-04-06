@@ -36,6 +36,7 @@ function Nav({ toggleTheme, theme }) {
             <li className="nav__link">
               <a
                 className="nav__link link__hover-effect link__hover-effect--black"
+
                 onClick={() => {
                   setOpenModal(true);
                 }}
@@ -45,8 +46,6 @@ function Nav({ toggleTheme, theme }) {
               {openMomdal && <Modal closeModal={setOpenModal} />}
             </li>
             <li className="nav__link switch click">
-              <a href="#" className="nav__link ">
-                {/*<FontAwesomeIcon icon="fa-adjust" />*/}
                 <ReactSwitch
                   checkedHandleIcon={<FontAwesomeIcon icon="fa-moon" className="moon"/>}
                   uncheckedHandleIcon={<FontAwesomeIcon icon="fa-sun" className="sun"/>}
@@ -63,7 +62,6 @@ function Nav({ toggleTheme, theme }) {
                   checked={theme === "dark"}
                   className={"check"}
                 />
-              </a>
             </li>
           </ul>
         </nav>
