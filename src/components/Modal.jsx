@@ -120,7 +120,7 @@ function Modal({ closeModal }) {
           </h3>
           <h3 className="modal__sub-title modal__sub-title--contact">
             {" "}
-            currently open for new opertunities
+            currently open for new opportunities
           </h3>
           <form ref={form} id="contact__form" onSubmit={sendEmail}>
             <div className="form__item">
