@@ -527,9 +527,9 @@ button {
 
 .card {
   overflow: visible;
-  width: 350px;
+  width: 400px;
   height: 350px;
-  margin: 20px 20px 0 0;
+  margin: 24px 20px 0 0;
 }
 
 .content {

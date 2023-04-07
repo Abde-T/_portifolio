@@ -17,7 +17,7 @@ function Nav({ toggleTheme, theme }) {
           <ul className="nav__link--list">
             <li className="nav__link">
               <a
-                className="nav__link link__hover-effect link__hover-effect--black  "
+                className=" displ__none nav__link link__hover-effect link__hover-effect--black  "
                 onClick={() => {
                   setOpenModal(true);
                 }}
@@ -28,7 +28,7 @@ function Nav({ toggleTheme, theme }) {
             <li className="nav__link">
               <a
                 href="#projects"
-                className="displ__none nav__link link__hover-effect link__hover-effect--black"
+                className=" nav__link link__hover-effect link__hover-effect--black"
               >
                 Projects
               </a>
