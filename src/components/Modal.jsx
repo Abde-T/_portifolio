@@ -51,7 +51,7 @@ function Modal({ closeModal }) {
             Here's a bit about me.
           </h3>
           <h4 className="modal__sub-title modal__sub-title--abou modal__white">
-            Frontend software engeneer.
+            Frontend software engineer.
           </h4>
           <p className="modal__para modal__white">
             My name is Abderrahmane Tiamani, a{" "}
@@ -91,7 +91,7 @@ function Modal({ closeModal }) {
               </figure>
               <span className="language__name"> Threejs</span>
             </div>
-            <div className="language">
+     {/*        <div className="language">
               <figure className="language__img--wrapper">
                 <img src={ts1} alt="" className="language__img" />
               </figure>
@@ -102,7 +102,7 @@ function Modal({ closeModal }) {
                 <img src={next1} alt="" className="language__img" />
               </figure>
               <span className="language__name"> Nextjs</span>
-            </div>
+            </div> */}
           </div>
         </div>
         <div
