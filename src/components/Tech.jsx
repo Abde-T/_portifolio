@@ -12,7 +12,7 @@ const Tech = () => {
           </h1>
           <div className="technologies">
           {technologies.map((technology) => (
-            <div className="tech_" key={technology.name}>
+            <div className="tech_" data-aos="fade-down" data-aos-once="true" key={technology.name}>
               <ShapeCanvas icon={technology.icon} />
             </div>
           ))}
