@@ -40,7 +40,7 @@ function Modal({ closeModal }) {
   };
 
   return (
-    <div className="modal">
+    <div id="modal">
       <div className="modal__wrapper">
         <div
           className="modal__half modal__about"

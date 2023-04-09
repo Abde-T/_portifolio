@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
-import Modal from "./Modal";
 import resume from "../assets/resume.pdf";
 
 function Footer(props) {
-  const [openMomdal, setOpenModal] = useState(false);
 
   return (
     <footer>
@@ -32,14 +30,10 @@ function Footer(props) {
           </a>
           <a
           href="#"
-            onClick={() => {
-              setOpenModal(true);
-            }}
             className="footer__social--link link__hover-effect link__hover-effect--white"
           >
             Contact
           </a>
-          {openMomdal && <Modal closeModal={setOpenModal} />}
           <a
             href={resume}
             className="footer__social--link link__hover-effect link__hover-effect--white"

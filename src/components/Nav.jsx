@@ -4,7 +4,7 @@ import Modal from "./Modal";
 import ReactSwitch from "react-switch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Nav({ toggleTheme, theme }) {
+function Nav({ toggleTheme, theme, }) {
   const [openMomdal, setOpenModal] = useState(false);
 
   return (

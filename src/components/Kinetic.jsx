@@ -12,8 +12,8 @@ function Kinetic() {
     kinetic.initialize();
     kinetic.animate();
     kinetic.camera = new THREE.PerspectiveCamera(
-      70,
-      1200/ 500,
+      80,
+      200/ 150,
       1,
       1000
     );
@@ -21,15 +21,16 @@ function Kinetic() {
 
     kinetic.controls = new OrbitControls(kinetic.camera, kinetic.renderer.domElement);
     kinetic.controls.enableZoom = false;
+    kinetic.controls.enableDamping=true
 
-    kinetic.renderer.setSize(1000, 600);
+    kinetic.renderer.setSize(900, 500);
 
     window.addEventListener("resize", () => onWindowResize(), false);
     
     function onWindowResize() {
-      kinetic.camera.aspect = 300 / 150;
+      kinetic.camera.aspect = 400 / 150;
       kinetic.camera.updateProjectionMatrix();
-      kinetic.renderer.setSize(800, 400);
+      kinetic.renderer.setSize(800, 500);
     }
 
     const light = new THREE.AmbientLight(0xffffff);
@@ -103,6 +104,15 @@ void main() {
 
     let clock;
     clock = new THREE.Clock();
+
+    function Animate() {
+      torus.rotation.x += 0.05;
+      torus.rotation.y += 0.075;
+      torus.rotation.z += 0.05;
+    }
+    
+    document.body.onscroll = Animate;
+    Animate();
 
     requestAnimationFrame(animate);
   }, []);
