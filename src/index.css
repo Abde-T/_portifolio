@@ -243,6 +243,7 @@ a {
   transform: scale(1);
   opacity: 1;
 }
+
 #text {
   z-index: 1;
   position: absolute;
