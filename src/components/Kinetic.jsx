@@ -106,9 +106,9 @@ void main() {
     clock = new THREE.Clock();
 
     function Animate() {
-      torus.rotation.x += 0.05;
-      torus.rotation.y += 0.075;
-      torus.rotation.z += 0.05;
+      torus.rotation.x += 0.01;
+      torus.rotation.y += 0.01;
+      torus.rotation.z += 0.01;
     }
     
     document.body.onscroll = Animate;

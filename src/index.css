@@ -316,7 +316,7 @@ footer {
   color: white;
 }
 
-#modal {
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -331,8 +331,6 @@ footer {
   backdrop-filter: blur(50px);
 }
 .modal__wrapper {
-  position: absolute;
-
   box-shadow: 0 0px 1000px rgb(0, 0, 0, 0.55);
   height: 700px;
   display: flex;
@@ -729,10 +727,12 @@ button {
     transform: translateY(0px);
   }
 }
+
 .tech_ {
   width: 150px;
   height: 150px;
 }
+
 .technologies {
   display: flex;
   flex-direction: row;
