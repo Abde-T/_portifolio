@@ -105,15 +105,6 @@ void main() {
     let clock;
     clock = new THREE.Clock();
 
-    function Animate() {
-      torus.rotation.x += 0.01;
-      torus.rotation.y += 0.01;
-      torus.rotation.z += 0.01;
-    }
-    
-    document.body.onscroll = Animate;
-    Animate();
-
     requestAnimationFrame(animate);
   }, []);
 
