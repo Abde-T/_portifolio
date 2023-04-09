@@ -28,7 +28,8 @@ function Kinetic() {
     window.addEventListener("resize", () => onWindowResize(), false);
     
     function onWindowResize() {
-      kinetic.camera.aspect = 400 / 150;
+      kinetic.camera.fov=70
+      kinetic.camera.aspect = 200 / 150;
       kinetic.camera.updateProjectionMatrix();
       kinetic.renderer.setSize(800, 500);
     }
