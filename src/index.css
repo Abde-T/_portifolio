@@ -856,6 +856,7 @@ button {
   }
 
   .header__para {
+    font-weight: 800;
     max-width: 100%;
   }
   .project__description {
