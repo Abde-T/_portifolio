@@ -39,7 +39,7 @@ export default class SceneInit {
     this.renderer = new THREE.WebGLRenderer({
       canvas,
       // NOTE: Anti-aliasing smooths out the edges.
-      antialias: true,
+      antialias: false,
       alpha: true,
     });
     this.renderer.setSize(500, 500);

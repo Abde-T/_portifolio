@@ -22,7 +22,6 @@ function Kinetic() {
     kinetic.controls = new OrbitControls(kinetic.camera, kinetic.renderer.domElement);
     kinetic.controls.enableZoom = false;
     kinetic.controls.enableDamping=true
-
     kinetic.renderer.setSize(900, 500);
 
     window.addEventListener("resize", () => onWindowResize(), false);
@@ -100,7 +99,6 @@ void main() {
       torus.rotation.z += 0.005;
       kinetic.renderer.render(kinetic.scene, kinetic.camera);
       Torusmaterial.uniforms.uTime.value = clock.getElapsedTime();
-      
     };
 
     let clock;
