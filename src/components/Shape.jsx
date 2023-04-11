@@ -14,7 +14,7 @@ import { useRef } from "react";
 const Shape = (props) => {
   const [decal] = useTexture([props.imgUrl]);
   const ref = useRef();
-  useFrame((state, delta) => (ref.current.rotation.y += 0.009));
+  useFrame((state, delta) => (ref.current.rotation.y += 0.01));
   return (
     <Float speed={10.75} rotationIntensity={1} floatIntensity={2}  >
       <ambientLight intensity={0.25} />
