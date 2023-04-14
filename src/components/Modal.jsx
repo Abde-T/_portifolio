@@ -51,7 +51,7 @@ function Modal({ closeModal }) {
             Here's a bit about me.
           </h3>
           <h4 className="modal__sub-title modal__sub-title--abou modal__white">
-            Frontend software engineer.
+             Junior Frontend developer
           </h4>
           <p className="modal__para modal__white">
             My name is Abderrahmane Tiamani, a{" "}
