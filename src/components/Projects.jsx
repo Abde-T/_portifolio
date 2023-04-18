@@ -14,7 +14,7 @@ function Projects() {
           <div className="project__list">
           {projects.map((project) => ( 
 
-            <div className="card " data-aos="fade-right" data-aos-once="true">
+            <div className="card " data-aos="fade-right" data-aos-once="true" key={project.name}>
               <div className="content">
                 <div className="back">
                   <div className="back-content">

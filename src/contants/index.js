@@ -5,16 +5,19 @@ import ts from "../assets/tech/ts1.png";
 import next from "../assets/tech/next1.png";
 import reactjs from "../assets/tech/react.png";
 import threejs from "../assets/tech/three.png";
+import tailwind from "../assets/tech/tailwind.png";
+import redux from "../assets/tech/redux.png";
+import Firebase from "../assets/tech/fire.png";
 
 
 
   const technologies = [
     {
-      name: "HTML 5",
+      name: "HTML5",
       icon: html,
     },
     {
-      name: "CSS 3",
+      name: "CSS3",
       icon: css,
     },
     {
@@ -26,12 +29,28 @@ import threejs from "../assets/tech/three.png";
       icon: typescript,
     }, */
     {
-      name: "React JS",
+      name: "ReactJS",
       icon: reactjs,
     },
     {
-      name: "Three JS",
+      name: "NextJS",
+      icon: next,
+    },
+    {
+      name: "TailwindCss",
+      icon: tailwind,
+    },
+    {
+      name: "ThreeJS",
       icon: threejs,
+    },
+    {
+      name: "Redux",
+      icon: redux,
+    },
+    {
+      name: "Firebase",
+      icon: Firebase,
     },
   ];
   
@@ -60,12 +79,12 @@ import fakeshop from "../assets/fakeShop.png";
 
     },
     {
-      name: " NFT Marketplace ",
+      name: " Social media website / twitter clone  ",
       image: ultra,
-      tech: "Html, Css, JavaScript, React",
-      para:'Transformed a static single page application to an interactive user interface. Includes real time API data fetching with skeleton loading states, pagination, and dynamic routing.',
-      github: 'https://github.com/Abde-T/Abde-internship/tree/Abde-animations',
-      link:'https://ultraverse-gamma.vercel.app/',
+      tech: "Next.js, Redux, Tailwindcss, Firebase",
+      para:'Developed a social media app with Posting Tweets, Commenting, and logging-in functionalities',
+      github: 'https://github.com/Abde-T/socialmedia',
+      link:'https://social-media-abde-t.vercel.app/',
 
     },
     {

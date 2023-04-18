@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import resume from "../assets/resume.pdf";
+import Modal from "./Modal";
 
 function Footer(props) {
+  const [openMomdal, setOpenModal] = useState(false);
 
   return (
     <footer>
@@ -25,15 +27,19 @@ function Footer(props) {
           <a
             href="https://www.linkedin.com/in/abderrahmane-tiamani-911b48266/" target={"_blank"}
             className="footer__social--link link__hover-effect link__hover-effect--white"
-          >
+            >
             LinkdIn
           </a>
           <a
           href="#"
-            className="footer__social--link link__hover-effect link__hover-effect--white"
+          onClick={() => {
+            setOpenModal(true);
+          }}
+          className="footer__social--link link__hover-effect link__hover-effect--white"
           >
             Contact
           </a>
+            {openMomdal && <Modal closeModal={setOpenModal} />}
           <a
             href={resume}
             className="footer__social--link link__hover-effect link__hover-effect--white"

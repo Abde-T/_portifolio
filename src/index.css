@@ -224,8 +224,8 @@ a {
   padding: 25px 2px;
 }
 .language {
-  margin: 0 20px 0 0;
-  width: 14%;
+  margin: 0 25px 0 0;
+  width: 12%;
   display: flex;
   justify-content: center;
   position: relative;
@@ -243,7 +243,7 @@ a {
   bottom: 0;
   transform: scale(0);
   transition: all 300ms;
-  font-size: 18px;
+  font-size: 15px;
   opacity: 0;
 }
 .language:hover .language__name {
@@ -264,6 +264,7 @@ a {
   justify-content: center;
   width: 100%;
   height: 100%;
+  margin: 50px 0 0 0;
 }
 .projects__wrapper {
   margin: 0 auto;
@@ -292,7 +293,6 @@ a {
 
 footer {
   height: 300px;
-  position: relative;
   padding: 6% 0;
   background-color: #242424;
   display: flex;
@@ -300,7 +300,6 @@ footer {
   align-items: center;
 }
 .footer__wrapper {
-  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -332,7 +331,7 @@ footer {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 5;
+  z-index: 50;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -739,9 +738,11 @@ button {
 .tech_ {
   width: 150px;
   height: 150px;
+  margin: 0 10px;
 }
 
 .technologies {
+  max-width: 900px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -851,6 +852,14 @@ button {
 }
 
 @media (max-width: 580px) {
+  .tech_{
+    margin: 0px;
+  }
+  .card {
+    width: 350px;
+    height: 350px;
+    margin: 24px 0px 0 0;
+  }
   .language {
     margin: 0 18px 0 0;
   }
@@ -879,7 +888,6 @@ button {
     font-size: 20px;
   }
   .proj__header {
-    z-index: 100;
     font-size: 24px;
   }
   .nav__link {

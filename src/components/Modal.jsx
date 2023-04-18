@@ -6,8 +6,14 @@ import html1 from "../assets/tech/html1.png";
 import js from "../assets/tech/js.png";
 import react from "../assets/tech/react.png";
 import three from "../assets/tech/three.png";
+import next from "../assets/tech/next1.png";
+import tailwind from "../assets/tech/tailwind.png";
+import redux from "../assets/tech/redux.png";
+
 import ts1 from "../assets/tech/ts1.png";
-import next1 from "../assets/tech/next1.png";
+
+import { technologies } from "../contants";
+
 
 function Modal({ closeModal }) {
   const form = useRef();
@@ -61,48 +67,15 @@ function Modal({ closeModal }) {
             3D elements to the web.
           </p>
           <div className="language__list ">
-            <div className="language">
+          {technologies.map((technology) => (
+            <div className="language" key={technology.name}>
               <figure className="language__img--wrapper">
-                <img src={html1} alt="" className="language__img" />
+                <img src={technology.icon} alt="" className="language__img" />
               </figure>
-              <span className="language__name"> HTML</span>
+              <span className="language__name"> {technology.name}</span>
             </div>
-            <div className="language">
-              <figure className="language__img--wrapper">
-                <img src={css1} alt="" className="language__img" />
-              </figure>
-              <span className="language__name"> CSS</span>
-            </div>
-            <div className="language">
-              <figure className="language__img--wrapper">
-                <img src={js} alt="" className="language__img" />
-              </figure>
-              <span className="language__name"> JavaScript</span>
-            </div>
-            <div className="language">
-              <figure className="language__img--wrapper">
-                <img src={react} alt="" className="language__img" />
-              </figure>
-              <span className="language__name"> Reactjs</span>
-            </div>
-            <div className="language">
-              <figure className="language__img--wrapper">
-                <img src={three} alt="" className="language__img" />
-              </figure>
-              <span className="language__name"> Threejs</span>
-            </div>
-     {/*        <div className="language">
-              <figure className="language__img--wrapper">
-                <img src={ts1} alt="" className="language__img" />
-              </figure>
-              <span className="language__name"> TypeScript</span>
-            </div>
-            <div className="language">
-              <figure className="language__img--wrapper">
-                <img src={next1} alt="" className="language__img" />
-              </figure>
-              <span className="language__name"> Nextjs</span>
-            </div> */}
+              ))}
+          
           </div>
         </div>
         <div
