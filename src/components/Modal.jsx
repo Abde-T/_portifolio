@@ -1,19 +1,7 @@
 import React, { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import emailjs from "@emailjs/browser";
-import css1 from "../assets/tech/css1.png";
-import html1 from "../assets/tech/html1.png";
-import js from "../assets/tech/js.png";
-import react from "../assets/tech/react.png";
-import three from "../assets/tech/three.png";
-import next from "../assets/tech/next1.png";
-import tailwind from "../assets/tech/tailwind.png";
-import redux from "../assets/tech/redux.png";
-
-import ts1 from "../assets/tech/ts1.png";
-
 import { technologies } from "../contants";
-
 
 function Modal({ closeModal }) {
   const form = useRef();
@@ -57,25 +45,26 @@ function Modal({ closeModal }) {
             Here's a bit about me.
           </h3>
           <h4 className="modal__sub-title modal__sub-title--abou modal__white">
-             Junior Frontend developer
+            Junior Frontend developer
           </h4>
           <p className="modal__para modal__white">
-            My name is Abderrahmane Tiamani, a{" "}
-            <b className="blue"> computer science </b> graduate and a
-            self-taught <b className="blue"> frontend developer </b>. I have a
-            great attraction to learning new tech and a keen interest in adding
-            3D elements to the web.
+            I'm an incredibly  <b className="blue"> motivated </b> individual looking for a role as a
+            <b className="blue"> Front-end developer </b>. I have a great interest in learning new tech
+            and a solid ability to work <b className="blue">independently</b> and <b className="blue"> learn quickly </b> due to
+            my high drive to learn new things and broaden my skill sets to
+            quickly adapt to new and unusual situations in order to be an <b className="blue">excellent 
+            fit </b> for your organization. 
+
           </p>
           <div className="language__list ">
-          {technologies.map((technology) => (
-            <div className="language" key={technology.name}>
-              <figure className="language__img--wrapper">
-                <img src={technology.icon} alt="" className="language__img" />
-              </figure>
-              <span className="language__name"> {technology.name}</span>
-            </div>
-              ))}
-          
+            {technologies.map((technology) => (
+              <div className="language" key={technology.name}>
+                <figure className="language__img--wrapper">
+                  <img src={technology.icon} alt="" className="language__img" />
+                </figure>
+                <span className="language__name"> {technology.name}</span>
+              </div>
+            ))}
           </div>
         </div>
         <div

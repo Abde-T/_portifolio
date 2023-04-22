@@ -39,7 +39,7 @@ li {
   box-shadow: 0 0px 1000px rgba(194, 194, 194, 0.55);
 }
 #dark .modal__about {
-  background-color: #2424249d;
+  background-color: #242424c9;
 }
 #dark .blue {
   color: #0077ff;
@@ -359,7 +359,7 @@ footer {
 .modal__about {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  background-color: #cccccc59;
+  background-color: #cccccce8;
 }
 .modal__title {
   font-size: 30px;
@@ -379,13 +379,12 @@ footer {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #ffffff;
-  color: white;
 }
 .model__exit {
   position: absolute;
   top: 30px;
   right: 40px;
-  color: rgb(253, 253, 253);
+  color: rgb(0, 0, 0);
   font-size: 36px;
   z-index: 100;
 }
