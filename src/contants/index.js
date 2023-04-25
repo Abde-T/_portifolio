@@ -72,10 +72,10 @@ import fakeshop from "../assets/fakeShop.png";
     {
       name: "Movie heaven",
       image: movieheaven,
-      tech: " Html, Css, JavaScript, React",
-      para:'A web application that fetches and displays movies using OMdbapi, The website, includes search bar and a responsive and interactive design.',
-      github: 'https://github.com/Abde-T/movie-heaven',
-      link:'https://movie-heaven.vercel.app/',
+      tech: " Nextjs, Redux, Firebase, TailwindCss ",
+      para:'A web application that fetches and displays movies using Tmdb, The website, includes search bar and a responsive and interactive design with multiple pages, carousel and user signup and login.',
+      github: 'https://github.com/Abde-T/movieheaven',
+      link:'https://movieheaven.vercel.app/',
 
     },
     {
