@@ -4,6 +4,7 @@ import Kinetic from "./Kinetic";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 import resume from "../assets/resume.pdf";
+import StarsCanvas from "./Stars";
 
 const Container = () => {
   return (
@@ -41,6 +42,7 @@ const Container = () => {
           </div>
           <div className="right" data-aos="fade-up" data-aos-once="true">
             <Kinetic />
+            <StarsCanvas/>
           </div>
         </div>
       </div>

@@ -170,8 +170,16 @@ a {
 
 .left {
   width: 50%;
+  z-index: 2;
 }
 
+.stars{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
 .title- {
   font-size: 120px;
   margin-bottom: 12px;
@@ -354,6 +362,7 @@ footer {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  
 }
 
 .modal__about {
