@@ -55,6 +55,7 @@ const ShapeCanvas = ({ icon }) => {
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
     >
+      
         <OrbitControls enableZoom={false} />
         <Shape imgUrl={icon} />
       <Preload all />

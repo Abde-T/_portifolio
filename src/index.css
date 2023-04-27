@@ -172,8 +172,9 @@ a {
 }
 
 .left {
-  width: 50%;
+  width: 100%;
   z-index: 2;
+  margin-left: 200px;
 }
 
 .stars{
@@ -184,7 +185,7 @@ a {
   z-index: 0;
 }
 .title- {
-  font-size: 120px;
+  font-size: 130px;
   margin-bottom: 12px;
   text-align: left;
   line-height: 1;
@@ -192,9 +193,9 @@ a {
 }
 .header__para {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 30px;
   line-height: 2;
-  max-width: 500px;
+  max-width: 700px;
 }
 .blue {
   color: #0077ff;
@@ -818,9 +819,15 @@ button {
   .title- {
     font-size: 80px;
   }
+  .header__para{
+    max-width: 700px;
+  }
   #text {
     top: 50%;
     left: 80%;
+  }
+  .left {
+    margin-left: 100px;
   }
 }
 
@@ -843,14 +850,15 @@ button {
     width: 100%;
   }
   .title- {
-    font-size: 50px;
+    font-size: 100px;
   }
   .header__para {
-    max-width: 80%;
-    font-size: 22px;
+    max-width: 70%;
+    font-size: 25px;
   }
   .left {
     width: 100%;
+    margin-left: 25px;
   }
   #text {
     display: none;
@@ -861,9 +869,19 @@ button {
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 650px) {
   .tech_{
     margin: 0px;
+  }
+  .title- {
+    font-size: 80px;
+  }
+  .header__para {
+    font-size: 20px;
+  }
+  .left {
+    width: 100%;
+    margin-left: -10px;
   }
   .card {
     width: 350px;
@@ -908,3 +926,5 @@ button {
     height: 100px;
   }
 }
+
+

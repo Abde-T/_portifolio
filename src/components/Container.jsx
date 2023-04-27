@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import Kinetic from "./Kinetic";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 import resume from "../assets/resume.pdf";
@@ -12,8 +11,11 @@ const Container = () => {
       <div className="row">
         <div className="container-">
           <div className="left " data-aos="fade-right" data-aos-once="true">
-            <h1 className="title-">Hey,</h1>
+            <h1 className="title- ">Hey,</h1>
+
             <h1 className="title- blue">I'm Abde</h1>
+
+            
             <p className="header__para">
               I am a <b className="blue">computer science </b> graduate and a
               self-thought <b className="blue"> front-end</b> developer. With a
@@ -39,9 +41,6 @@ const Container = () => {
                 <FontAwesomeIcon icon="fa-file-pdf" className="ic__img" />
               </a>
             </div>
-          </div>
-          <div className="right" data-aos="fade-up" data-aos-once="true">
-            <Kinetic />
           </div>
           <StarsCanvas/>
         </div>
