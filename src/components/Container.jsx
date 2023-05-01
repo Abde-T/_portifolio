@@ -13,9 +13,17 @@ const Container = () => {
           <div className="left " data-aos="fade-right" data-aos-once="true">
             <h1 className="title- ">Hey,</h1>
 
-            <h1 className="title- blue">I'm Abde</h1>
+            <h1 className=" title_">
+              <div className="space">
+              <span id="hover" className="title_ blue">I'</span> 
+              <span id="hover" className="title_ blue">m</span> 
+              </div>
+              <span id="hover" className="title_ blue">A</span> 
+              <span id="hover" className="title_ blue">b</span>
+              <span id="hover" className="title_ blue">d</span> 
+              <span id="hover" className="title_ blue">e</span>
+            </h1>
 
-            
             <p className="header__para">
               I am a <b className="blue">computer science </b> graduate and a
               self-taught <b className="blue"> front-end</b> developer. With a
@@ -42,7 +50,7 @@ const Container = () => {
               </a>
             </div>
           </div>
-          <StarsCanvas/>
+          <StarsCanvas />
         </div>
       </div>
     </div>

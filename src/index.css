@@ -184,13 +184,50 @@ a {
   inset: 0;
   z-index: 0;
 }
-.title- {
+.title-, .title_ {
   font-size: 130px;
   margin-bottom: 12px;
   text-align: left;
   line-height: 1;
+}
+.title_{
+  display: flex;
+}
+#hover{
+  display:inline-block;
+  margin: 0 5px 0 -4px;
+  transition:300ms;
+}
+.space {
+  margin:0 30px 0 0;
+}
+
+#hover.title_:nth-child(even):hover {
+  filter: blur(0.9px);
+  scale: 1.1;
+  -webkit-text-stroke: 1px #0066ff;
+  text-shadow:
+       3px 3px 0 #00ccff,
+     -1px -1px 0 #00ccff,  
+      1px -1px 0 #00ccff,
+      -1px 1px 0 #00ccff,
+       1px 1px 0 #00ccff;
 
 }
+
+#hover.title_:nth-child(odd):hover {
+  filter: blur(0.9px);
+  scale: 1.1;
+  -webkit-text-stroke: 1px #0084ff;
+  text-shadow:
+       3px 3px 0 #00ccff,
+     -1px -1px 0 #00ccff,  
+      1px -1px 0 #00ccff,
+      -1px 1px 0 #00ccff,
+       1px 1px 0 #00ccff;
+
+}
+
 .header__para {
   font-weight: 500;
   font-size: 30px;
@@ -853,7 +890,7 @@ button {
     font-size: 100px;
   }
   .header__para {
-    max-width: 70%;
+    max-width: 90%;
     font-size: 25px;
   }
   .left {
@@ -873,8 +910,11 @@ button {
   .tech_{
     margin: 0px;
   }
-  .title- {
+  .title-, .title_ {
     font-size: 80px;
+  }
+  .space {
+    margin:0 15px 0 0;
   }
   .header__para {
     font-size: 20px;
