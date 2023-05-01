@@ -84,7 +84,7 @@ import fakeshop from "../assets/fakeShop.png";
       tech: "Next.js, Redux, Tailwindcss, Firebase",
       para:'Developed a social media app with Posting Tweets, Commenting, and logging-in functionalities',
       github: 'https://github.com/Abde-T/socialmedia',
-      link:'https://social-media-git-master-abde-t.vercel.app/',
+      link:'https://social-media-abde-t.vercel.app/',
 
     },
     {
