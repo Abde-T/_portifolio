@@ -240,13 +240,13 @@ a {
   -webkit-text-stroke: 1px #0066ff;
   text-shadow:
   0 0 2px #fff,
+  0 0 2px #fff,
   0 0 5px #fff,
-  0 0 8px #fff,
-  0 0 22px #0084ff,
-  0 0 42px #0084ff,
-  0 0 52px #0084ff,
-  0 0 82px #0084ff,
-  0 0 91px #0084ff;
+  0 0 5px #0084ff,
+  0 0 9px #0084ff,
+  0 0 10px #0084ff,
+  0 0 20px #0084ff,
+  0 0 10px #0084ff;
 }
 
 #hover.title_:nth-child(odd):hover {
@@ -255,13 +255,13 @@ a {
   -webkit-text-stroke: 1px #0084ff;
   text-shadow:
   0 0 2px #fff,
+  0 0 2px #fff,
   0 0 5px #fff,
-  0 0 8px #fff,
-  0 0 22px #0084ff,
-  0 0 42px #0084ff,
-  0 0 52px #0084ff,
-  0 0 82px #0084ff,
-  0 0 91px #0084ff;
+  0 0 5px #0084ff,
+  0 0 9px #0084ff,
+  0 0 10px #0084ff,
+  0 0 20px #0084ff,
+  0 0 10px #0084ff;
 
 }
 
