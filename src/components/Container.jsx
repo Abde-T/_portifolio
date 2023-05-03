@@ -5,13 +5,19 @@ import linkedin from "../assets/linkedin.png";
 import resume from "../assets/resume.pdf";
 import StarsCanvas from "./Stars";
 
+
+
 const Container = () => {
   return (
     <div className="container__wrapper">
       <div className="row">
         <div className="container-">
           <div className="left " data-aos="fade-right" data-aos-once="true">
-            <h1 className="title- ">Hey,</h1>
+            <h1 className="title- ">
+            <span id="hover" className="title- white">H</span> 
+              <span id="hover" className="title- white">e</span>
+              <span id="hover" className="title- white">y,</span> 
+            </h1>
 
             <h1 className=" title_">
               <div className="space">

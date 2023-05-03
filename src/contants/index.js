@@ -79,21 +79,12 @@ import fakeshop from "../assets/fakeShop.png";
 
     },
     {
-      name: " Social media website / twitter clone  ",
+      name: " Twitter Clone  ",
       image: ultra,
       tech: "Next.js, Redux, Tailwindcss, Firebase",
       para:'Developed a social media app with Posting Tweets, Commenting, and logging-in functionalities',
       github: 'https://github.com/Abde-T/socialmedia',
       link:'https://social-media-abde-t.vercel.app/',
-
-    },
-    {
-      name: "open world game",
-      image: game,
-      tech: "React three fiber, React three canon",
-      para:' A simple open world-game made with React three fiber and cannon.js physics engine.',
-      github: 'https://github.com/Abde-T/car-game',
-      link:'https://car-game-sigma.vercel.app/',
 
     },
     

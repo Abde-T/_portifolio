@@ -32,7 +32,9 @@ li {
 #dark .header__para,
 #dark .language__name,
 #dark h1,
-#dark .modal__white{
+#dark .modal__white,
+#dark .technologie__name,
+#dark .white{
   color: white;
 }
 #dark .link__hover-effect--black::after{
@@ -159,15 +161,15 @@ a {
 .social__link {
   background-color: #0077ff;
   color: rgb(255, 255, 255);
-  font-size: 14px;
+  font-size: 20px;
   padding: 6px;
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   margin-right: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+  border-radius: 50px;
   z-index: 3;
 }
 
@@ -190,29 +192,61 @@ a {
   text-align: left;
   line-height: 1;
 }
+.white{
+  color: #242424;
+}
 .title_{
   display: flex;
 }
 #hover{
   display:inline-block;
   margin: 0 5px 0 -4px;
-  transition:300ms;
+  transition:200ms;
 }
 .space {
   margin:0 30px 0 0;
 }
+#hover.title-:nth-child(even):hover {
+  filter: blur(0.9px);
+  scale: 1.1;
+  -webkit-text-stroke: 1px #0066ff;
+  text-shadow:
+
+  0 0 1px #0084ff73,
+  0 0 3px #0084ff73,
+  0 0 5px #0084ff73,
+  0 0 9px #0084ff73,
+  0 0 10px #0084ff73;
+}
+
+#hover.title-:nth-child(odd):hover {
+  filter: blur(0.9px);
+  scale: 1.1;
+  -webkit-text-stroke: 1px #0084ff;
+  text-shadow:
+
+  0 0 1px #0084ff73,
+  0 0 3px #0084ff73,
+  0 0 5px #0084ff73,
+  0 0 9px #0084ff73,
+  0 0 10px #0084ff73;
+
+}
+
 
 #hover.title_:nth-child(even):hover {
   filter: blur(0.9px);
   scale: 1.1;
   -webkit-text-stroke: 1px #0066ff;
   text-shadow:
-       3px 3px 0 #00ccff,
-     -1px -1px 0 #00ccff,  
-      1px -1px 0 #00ccff,
-      -1px 1px 0 #00ccff,
-       1px 1px 0 #00ccff;
-
+  0 0 2px #fff,
+  0 0 5px #fff,
+  0 0 8px #fff,
+  0 0 22px #0084ff,
+  0 0 42px #0084ff,
+  0 0 52px #0084ff,
+  0 0 82px #0084ff,
+  0 0 91px #0084ff;
 }
 
 #hover.title_:nth-child(odd):hover {
@@ -220,11 +254,14 @@ a {
   scale: 1.1;
   -webkit-text-stroke: 1px #0084ff;
   text-shadow:
-       3px 3px 0 #00ccff,
-     -1px -1px 0 #00ccff,  
-      1px -1px 0 #00ccff,
-      -1px 1px 0 #00ccff,
-       1px 1px 0 #00ccff;
+  0 0 2px #fff,
+  0 0 5px #fff,
+  0 0 8px #fff,
+  0 0 22px #0084ff,
+  0 0 42px #0084ff,
+  0 0 52px #0084ff,
+  0 0 82px #0084ff,
+  0 0 91px #0084ff;
 
 }
 
@@ -238,6 +275,7 @@ a {
   color: #0077ff;
 }
 .tech {
+  margin: 100px 0 0 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -279,6 +317,7 @@ a {
   justify-content: center;
   position: relative;
 }
+
 
 .language__list {
   z-index: 30;
@@ -593,7 +632,7 @@ button {
 
 .card {
   overflow: visible;
-  width: 400px;
+  width: 360px;
   height: 350px;
   margin: 24px 20px 0 0;
 }
@@ -786,11 +825,31 @@ button {
 .tech_ {
   width: 150px;
   height: 150px;
-  margin: 0 10px;
+  margin: 5px 10px;
+}
+.technologie{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.technologie:hover .technologie__name {
+  transform: scale(1);
+  opacity: 1;
+}
+.technologie__name {
+  color: #242424;
+  font-weight: 800;
+  position: absolute;
+  bottom: -20px;
+  transform: scale(0);
+  transition: all 300ms;
+  font-size: 20px;
+  opacity: 0;
 }
 
 .technologies {
   max-width: 900px;
+  margin: 100px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -866,6 +925,9 @@ button {
   .left {
     margin-left: 100px;
   }
+  .technologie__name{
+    bottom: -10px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -904,11 +966,17 @@ button {
   .tech__wrapper {
     margin-top: 50px;
   }
+  .tech_ {
+    margin: 8px 0;
+    width: 130px;
+    height: 100px;
+  }
 }
 
 @media (max-width: 650px) {
-  .tech_{
-    margin: 0px;
+  .technologie__name{
+    font-size: 15px;
+    bottom: -8px;
   }
   .title-, .title_ {
     font-size: 80px;
@@ -961,10 +1029,7 @@ button {
   .nav__link {
     margin: 0 5px;
   }
-  .tech_ {
-    width: 130px;
-    height: 100px;
-  }
+
 }
 
 

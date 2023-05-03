@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
   Decal,
@@ -14,9 +14,8 @@ import { useRef } from "react";
 const Shape = (props) => {
   const [decal] = useTexture([props.imgUrl]);
   const ref = useRef();
-  useFrame((state, delta) => (ref.current.rotation.y += 0.01));
   return (
-    <Float speed={10.75} rotationIntensity={1} floatIntensity={2}  >
+    <Float speed={10.75} rotationIntensity={0.5} floatIntensity={2}  >
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={2.75} {...props} ref={ref}>
@@ -55,9 +54,11 @@ const ShapeCanvas = ({ icon }) => {
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
     >
-      
+        <Suspense>
         <OrbitControls enableZoom={false} />
         <Shape imgUrl={icon} />
+        </Suspense>
+
       <Preload all />
     </Canvas>
   );
