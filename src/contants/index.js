@@ -54,7 +54,6 @@ import Firebase from "../assets/tech/fire.png";
     },
   ];
   
-import game from "../assets/game.png";
 import ultra from "../assets/ultra.png";
 import movieheaven from "../assets/movieHeaven.png";
 import fakeshop from "../assets/fakeShop.png";
