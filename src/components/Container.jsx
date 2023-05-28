@@ -32,9 +32,9 @@ const Container = () => {
 
             <p className="header__para">
               I am a <b className="blue">computer science </b> graduate and a
-              self-taught <b className="blue"> front-end</b> developer. With a
-              strong passion for building <b className="blue"> responsive </b>{" "}
-              and <b className="blue"> interactive </b> web applications.
+              self-taught <b className="blue"> MERN full-stack </b> developer. With a
+              strong passion for building <b className="blue"> web applications </b>{" "}
+              with a  <b className="blue"> responsive </b>and <b className="blue"> interactive </b> design.
             </p>
             <div className="social__list">
               <a

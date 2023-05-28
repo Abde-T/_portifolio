@@ -45,22 +45,26 @@ function Modal({ closeModal }) {
             Here's a bit about me.
           </h3>
           <h4 className="modal__sub-title modal__sub-title--abou modal__white">
-            Junior Frontend developer
+            Junior MERN fullstack developer
           </h4>
           <p className="modal__para modal__white">
-            I'm an incredibly  <b className="blue"> motivated </b> individual looking for a role as a
-            <b className="blue"> Front-end developer </b>. I have a great interest in learning new tech
-            and a solid ability to work <b className="blue">independently</b> and <b className="blue"> learn quickly </b> due to
-            my high drive to learn new things and broaden my skill sets to
-            quickly adapt to new and unusual situations in order to be an <b className="blue">excellent 
-            fit </b> for your organization. 
-
+            Passionate and highly motivated junior <span className="blue"> MERN full-stack developer </span>
+            actively seeking new opportunities. I thrive on learning 
+            <span className="blue"> new technologies</span> and possess the ability to <span className="blue"> work independently</span>, adapt
+            quickly to unconventional situations, and broaden my skill set. I am
+            excited to contribute my expertise and dedication to your
+            organization. Let's <span className="blue"> connect</span> and explore how my skills can help drive
+            success and innovation.
           </p>
           <div className="language__list ">
-            {technologies.map((technology) => (
+            {technologies.slice(3, 7).map((technology) => (
               <div className="language" key={technology.name}>
                 <figure className="language__img--wrapper">
-                  <img src={technology.icon} alt="" className="language__img" />
+                  <img
+                    src={technology.icon}
+                    alt={technology.name}
+                    className="language__img"
+                  />
                 </figure>
                 <span className="language__name"> {technology.name}</span>
               </div>

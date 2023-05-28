@@ -303,7 +303,7 @@ padding:25px 2px
 
 .language{
 margin:0 25px 0 0;
-width:12%;
+width:15%;
 display:flex;
 justify-content:center;
 position:relative
@@ -651,8 +651,8 @@ transition:all 300ms ease
 
 .card{
 overflow:visible;
-width:360px;
-height:350px;
+width:450px;
+height: 500px;
 margin:24px 20px 0 0
 }
 
@@ -855,7 +855,7 @@ opacity:0
 }
 
 .technologies{
-max-width:900px;
+max-width:1200px;
 margin:100px 0;
 display:flex;
 flex-direction:row;
@@ -1024,7 +1024,7 @@ margin-left:-10px
 
 .card{
 width:350px;
-height:350px;
+height:500px;
 margin:24px 0 0
 }
 
