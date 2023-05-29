@@ -21,7 +21,7 @@ function Projects() {
                     <img
                       src={project.image}
                       className="project__img"
-                      alt=""
+                      alt= {project.name}
                       loading="lazy"
                       />
                     <strong>

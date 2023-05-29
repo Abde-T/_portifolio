@@ -32,7 +32,7 @@ const Stars = (props) => {
 const StarsCanvas = () => {
   return (
     <div className="stars">
-      <Canvas camera={{ position: [0, 0, 1] }}>
+      <Canvas camera={{ position: [0, 0, 1] }} >
       <Suspense fallback={null}>
           <Stars />
         </Suspense>
