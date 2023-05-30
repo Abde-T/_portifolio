@@ -56,6 +56,8 @@ const Container = () => {
               </a>
             </div>
           </div>
+          <div className="right">
+          </div>
           <StarsCanvas />
         </div>
       </div>

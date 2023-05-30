@@ -88,14 +88,15 @@ function Modal({ closeModal }) {
             {" "}
             currently open for new opportunities
           </h3>
-          <form ref={form} id="contact__form" onSubmit={sendEmail}>
+          <form ref={form} id="contact__form" autoComplete="off"  onSubmit={sendEmail}>
             <div className="form__item">
               <label className="form__item--lable">Name</label>
-              <input className="input" name="name" type="text"></input>
+              <input className="input" name="name" autoComplete="off" type="text"></input>
             </div>
             <div className="form__item">
               <label className="form__item--lable">Email</label>
               <input
+               autoComplete="off"
                 className="input"
                 name="email"
                 type="email"

@@ -126,10 +126,7 @@ height:100%
 display:flex
 }
 
-.right{
-height:500px;
-width:50%
-}
+
 
 .container{
 display:flex
@@ -184,9 +181,12 @@ z-index:3
 }
 
 .left{
-width:100%;
+width:70%;
 z-index:2;
-margin-left:200px
+}
+
+.right{
+width:30%;
 }
 
 .stars{
@@ -329,14 +329,6 @@ opacity:0
 .language:hover .language__name{
 transform:scale(1);
 opacity:1
-}
-
-#text{
-z-index:1;
-position:absolute;
-top:50%;
-left:72%;
-transform:translate(-50%,-50%)
 }
 
 #projects{
@@ -942,10 +934,6 @@ top:50%;
 left:80%
 }
 
-.left{
-margin-left:100px
-}
-
 .technologie__name{
 bottom:-10px
 }
@@ -1027,7 +1015,6 @@ font-size:20px
 
 .left{
 width:100%;
-margin-left:-10px
 }
 
 .card{
