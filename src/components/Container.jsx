@@ -56,7 +56,9 @@ const Container = () => {
               </a>
             </div>
           </div>
-          <div className="right">
+          <div className="right" data-aos="fade-left" data-aos-once="true">
+          <div class="planet">
+          </div>
           </div>
           <StarsCanvas />
         </div>
