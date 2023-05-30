@@ -228,8 +228,8 @@ align-items: center;
       #6475a8 73%,
       #6475a8 82%,
       #0084ff 82%,
-      #6475a8 86%,
-      #6475a8 86%
+      #6475a8 96%,
+      #6475a8 10%
     );
     box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.25),
       inset 8px -4px 6px rgba(0, 103, 199, 0.5),
@@ -265,7 +265,7 @@ align-items: center;
     box-shadow: 0 -2px 0 #0084ff;
     animation: rings2 0.8s infinite linear;
   }
-  
+
   @keyframes rings1 {
     0% {
       transform: rotateX(65deg) rotateZ(0deg) scale(1.65);
