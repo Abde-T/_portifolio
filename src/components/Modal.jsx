@@ -4,15 +4,16 @@ import emailjs from "@emailjs/browser";
 import { technologies } from "../contants";
 
 function Modal({ closeModal }) {
-  const form = useRef();
+  const form = useRef(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    const success = document.querySelector(".modal__overlay--success");
-    const failed = document.querySelector(".modal__overlay--failed");
-    const loading = document.querySelector(".modal__overlay--loading");
-    loading.classList += " modal__overlay--visible";
+    const successOverlay = document.querySelector(".modal__overlay--success");
+    const failedOverlay = document.querySelector(".modal__overlay--failed");
+    const loadingOverlay = document.querySelector(".modal__overlay--loading");
+
+    loadingOverlay.classList.add("modal__overlay--visible");
 
     emailjs
       .sendForm(
@@ -23,12 +24,12 @@ function Modal({ closeModal }) {
       )
       .then(
         (result) => {
-          loading.classList.remove("modal__overlay--visible");
-          success.classList += " modal__overlay--visible";
+          loadingOverlay.classList.remove("modal__overlay--visible");
+          successOverlay.classList.add("modal__overlay--visible");
         },
         (error) => {
-          loading.classList.remove("modal__overlay--visible");
-          failed.classList += " modal__overlay--visible";
+          loadingOverlay.classList.remove("modal__overlay--visible");
+          failedOverlay.classList.add("modal__overlay--visible");
         }
       );
   };
@@ -48,13 +49,15 @@ function Modal({ closeModal }) {
             Junior MERN fullstack developer
           </h4>
           <p className="modal__para modal__white">
-            Passionate and highly motivated junior <span className="blue"> MERN full-stack developer </span>
-            actively seeking new opportunities. I thrive on learning 
-            <span className="blue"> new technologies</span> and possess the ability to <span className="blue"> work independently</span>, adapt
+            Passionate and highly motivated junior{" "}
+            <span className="blue"> MERN full-stack developer </span>
+            actively seeking new opportunities. I thrive on learning
+            <span className="blue"> new technologies</span> and possess the
+            ability to <span className="blue"> work independently</span>, adapt
             quickly to unconventional situations, and broaden my skill set. I am
             excited to contribute my expertise and dedication to your
-            organization. Let's <span className="blue"> connect</span> and explore how my skills can help drive
-            success and innovation.
+            organization. Let's <span className="blue"> connect</span> and
+            explore how my skills can help drive success and innovation.
           </p>
           <div className="language__list ">
             {technologies.slice(3, 7).map((technology) => (
@@ -88,15 +91,25 @@ function Modal({ closeModal }) {
             {" "}
             currently open for new opportunities
           </h3>
-          <form ref={form} id="contact__form" autoComplete="off"  onSubmit={sendEmail}>
+          <form
+            ref={form}
+            id="contact__form"
+            autoComplete="off"
+            onSubmit={sendEmail}
+          >
             <div className="form__item">
               <label className="form__item--lable">Name</label>
-              <input className="input" name="name" autoComplete="off" type="text"></input>
+              <input
+                className="input"
+                name="name"
+                autoComplete="off"
+                type="text"
+              ></input>
             </div>
             <div className="form__item">
               <label className="form__item--lable">Email</label>
               <input
-               autoComplete="off"
+                autoComplete="off"
                 className="input"
                 name="email"
                 type="email"
@@ -119,8 +132,8 @@ function Modal({ closeModal }) {
             Thanks for the message! Looking forward to speaking to you soon.
           </div>
           <div className="modal__overlay modal__overlay--failed">
-            The email service is temporarily unavalible. Please contact me
-            diractly on " tiamani3939@gmail.com "
+            The email service is temporarily unavailable. Please contact me
+            directly at "tiamani3939@gmail.com".
           </div>
         </div>
       </div>

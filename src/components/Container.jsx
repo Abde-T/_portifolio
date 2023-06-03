@@ -4,6 +4,7 @@ import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 import resume from "../assets/resume.pdf";
 import StarsCanvas from "./Stars";
+import EarthCanvas from "./Earth";
 
 
 
@@ -57,15 +58,13 @@ const Container = () => {
             </div>
           </div>
           <div className="right" data-aos="fade-left" data-aos-once="true">
-          <div class="planet">
-          </div>
+            <EarthCanvas/>
           </div>
           <StarsCanvas />
         </div>
       </div>
     </div>
-  );
-};
+)};
 
 export default Container;
 
