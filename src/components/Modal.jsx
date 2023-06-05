@@ -46,12 +46,11 @@ function Modal({ closeModal }) {
             Here's a bit about me.
           </h3>
           <h4 className="modal__sub-title modal__sub-title--abou modal__white">
-            Junior MERN fullstack developer
+            Junior software engineer 
           </h4>
           <p className="modal__para modal__white">
-            Passionate and highly motivated junior{" "}
-            <span className="blue"> MERN full-stack developer </span>
-            actively seeking new opportunities. I thrive on learning
+            Passionate and highly motivated individual looking for a role as a
+            <span className="blue"> Software Engineer </span>I thrive on learning
             <span className="blue"> new technologies</span> and possess the
             ability to <span className="blue"> work independently</span>, adapt
             quickly to unconventional situations, and broaden my skill set. I am

@@ -32,8 +32,7 @@ const Container = () => {
             </h1>
 
             <p className="header__para">
-              I am a <b className="blue">computer science </b> graduate and a
-              self-taught <b className="blue"> MERN full-stack </b> developer. With a
+              I am a <b className="blue">Self-Taught developer, </b> With a
               strong passion for building <b className="blue"> web applications </b>{" "}
               with a  <b className="blue"> responsive </b>and <b className="blue"> interactive </b> design.
             </p>
