@@ -66,6 +66,7 @@ function Modal({ closeModal }) {
                     src={technology.icon}
                     alt={technology.name}
                     className="language__img"
+                    loading="lazy"
                   />
                 </figure>
                 <span className="language__name"> {technology.name}</span>

@@ -42,7 +42,7 @@ const ProjectCard = ({ project }) => {
                     target={"_blank"}
                     className="project__description--link click"
                   >
-                    <img src={github} alt="" className="ic__img-" />
+                    <img src={github} alt="" className="ic__img-" loading="lazy"/>
                   </a>
                   <a
                     href={project.link}
