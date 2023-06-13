@@ -400,7 +400,7 @@ a {
   margin: 0 auto;
   padding: 30px;
   font-size: 25px;
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -412,7 +412,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .project__img {
   width: 100%;
@@ -661,8 +661,8 @@ button {
 }
 .card {
   overflow: visible;
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
   margin: 24px 20px 0 0;
 }
 .content {
@@ -825,9 +825,9 @@ button {
   }
 }
 .tech_ {
-  width: 100px;
-  height: 100px;
-  margin: 15px 10px;
+  width: 120px;
+  height: 120px;
+  margin: 15px 20px;
 }
 .technologie {
   display: flex;
