@@ -33,7 +33,7 @@ const Tech = () => {
           >
             This is my <span className="blue">technology stack</span>{" "}
           </h1>
-          <TechnologyList />
+          <TechnologyList /> 
         </div>
       </div>
     </section>

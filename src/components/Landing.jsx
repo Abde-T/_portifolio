@@ -8,7 +8,6 @@ function Landing({toggleTheme, theme}) {
         <section>
            <Nav theme ={theme} toggleTheme={toggleTheme} />
            <Container/>
-    
         </section>
     );
 }
