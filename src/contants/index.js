@@ -1,7 +1,6 @@
 import css from "../assets/tech/css1.png";
 import html from "../assets/tech/html1.png";
 import javascript from "../assets/tech/js.png";
-import ts from "../assets/tech/ts1.png";
 import next from "../assets/tech/next1.png";
 import reactjs from "../assets/tech/react.png";
 import tailwind from "../assets/tech/tailwind.png";
@@ -19,20 +18,12 @@ const technologies = [
   { name: "NextJS", icon: next },
   { name: "TailwindCss", icon: tailwind },
 ];
-import ultra from "../assets/ultra.png";
+
 import movieheaven from "../assets/movieHeaven.png";
 import fakeshop from "../assets/fakeShop.png";
-import chatApp from "../assets/chatapp.png";
-import carcatalogue from "../assets/carcatalogue.png";
+import rmp from '../assets/rmp.png'
+
 const projects = [
-  {
-    name: " Car Catalogue   ",
-    image: carcatalogue,
-    tech: "Nextjs 13, Typescript, TailwindCSS",
-    para: "•Developed and implemented a modern web application utilizing Next.js 13, TypeScript, and Tailwind CSS, providing advanced search functionality with filtering capabilities, resulting in a user-friendly experience and increased customer engagement.",
-    github: "https://github.com/Abde-T/carcatalogue",
-    link: "https://carcatalogue.vercel.app/",
-  },
   {
     name: "Fake shop",
     image: fakeshop,
@@ -50,20 +41,12 @@ const projects = [
     link: "https://movieheaven.vercel.app/",
   },
   {
-    name: " Twitter Clone  ",
-    image: ultra,
-    tech: "Next.js, Redux, Tailwindcss, Firebase",
-    para: "Created a social media application inspired by Twitter, built with Next.js, Redux, and Firebase. Empowering users with the ability to post tweets, engage in lively discussions through comments, and seamlessly log in to the platform.",
-    github: "https://github.com/Abde-T/socialmedia",
-    link: "https://social-media-abde-t.vercel.app/",
-  },
-  {
-    name: " ChatApp  ",
-    image: chatApp,
-    tech: "Node.js, Expressjs, Socket.io",
-    para: "Engineered a cutting-edge chat application in MERN stack, utilizing Node.js and Socket.io to deliver instantaneous messaging capabilities for users across multiple chat rooms, resulting in improved user engagement and satisfaction.",
-    github: "https://github.com/Abde-T/chat_app",
-    link: "https://chatapp-ybq3.onrender.com/",
+    name: "Rate My Portfolio",
+    image: rmp,
+    tech: "MERN stack",
+    para: 'Developed a high-performance website using the MERN stack, allowing developers to create an account and upload their portfolios for review, providing a platform for showcasing their skills and receiving feedback from peers. It leverages MongoDB, Express.js, React, and Node.js to deliver a seamless user experience and robust functionality.',
+    github: "https://github.com/Abde-T/rmp",
+    link: "https://rmp-abde-t.vercel.app/",
   },
 ];
 export { projects };
