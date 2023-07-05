@@ -6,7 +6,7 @@ import { projects } from "../contants";
 const ProjectCard = ({ project }) => {
   return (
     <>
-      <article class="card" data-aos="fade-right" data-aos-once="true">
+      <article className="card" data-aos="fade-right" data-aos-once="true">
         <div>
           <img
             src={project.image}
@@ -15,13 +15,13 @@ const ProjectCard = ({ project }) => {
             loading="lazy"
           />
         </div>
-        <div class="card_content">
-          <span class="card_title">
+        <div className="card_content">
+          <span className="card_title">
               {project.name}
           </span>
-          <span class="card_subtitle">{project.tech}</span>
-          <p class="card_description">{project.para}</p>
-          <div class="card_description">
+          <span className="card_subtitle">{project.tech}</span>
+          <p className="card_description">{project.para}</p>
+          <div className="card_description">
                   <a
                     href={project.github}
                     target={"_blank"}
