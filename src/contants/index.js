@@ -45,7 +45,7 @@ const projects = [
     name: "Review My Project",
     image: rmp,
     tech: "MERN stack",
-    para: 'Developed a high-performance website using the MERN stack, allowing developers to create an account and upload their portfolios for review, providing a platform for showcasing their skills and receiving feedback from peers. It leverages MongoDB, Express.js, React, and Node.js to deliver a seamless user experience and robust functionality.',
+    para: 'Developed a high-performance website using the MERN stack, allowing developers to create an account and upload their Projects for review, providing a platform for showcasing their skills and receiving feedback from peers.',
     github: "https://github.com/Abde-T/rmp",
     link: "https://rmp-abde-t.vercel.app/",
   },
