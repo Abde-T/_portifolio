@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
-import Modal from "./Modal";
+import Modal from "../ui/Modal";
 import ReactSwitch from "react-switch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

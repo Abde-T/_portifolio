@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import resume from "../assets/Abde-T resume.pdf";
-import Modal from "./Modal";
+import Modal from "../ui/Modal";
 
 function Footer() {
   const [openModal, setOpenModal] = useState(false);

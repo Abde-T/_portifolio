@@ -1,5 +1,5 @@
 import React from "react";
-import ShapeCanvas from "./Shape";
+import ShapeCanvas from "../threejs/Shape";
 import { technologies } from "../contants";
 
 const TechnologyList = () => {

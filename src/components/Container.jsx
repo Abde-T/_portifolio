@@ -3,8 +3,8 @@ import React from "react";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 import resume from "../assets/Abde-T resume.pdf";
-import StarsCanvas from "./Stars";
-import EarthCanvas from "./Earth";
+import StarsCanvas from "../threejs/Stars";
+import EarthCanvas from "../threejs/Earth";
 
 
 

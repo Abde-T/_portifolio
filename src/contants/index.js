@@ -51,5 +51,4 @@ const projects = [
   },
 
 ];
-export { projects };
-export { technologies };
+export { projects, technologies };
