@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import github from "../assets/github.png";
 const ProjectCard = ({ project }) => {
   return (
-    <article className="card" data-aos="fade-right" data-aos-once="true">
+    <article className="card" data-aos="zoom-out-right" data-aos-once="true">
       <div>
         <img
           src={project.image}
@@ -12,8 +12,8 @@ const ProjectCard = ({ project }) => {
           loading="lazy"
         />
       </div>
-      <div className="card_content">
-        <span className="card_title">{project.name}</span>
+      <div className="card_content" >
+        <span className="card_title " >{project.name}</span>
         <span className="card_subtitle">{project.tech}</span>
         <p className="card_description">{project.para}</p>
         <div className="card_description">

@@ -23,13 +23,14 @@ const technologies = [
 import movieheaven from "../assets/movieHeaven.png";
 import fakeshop from "../assets/fakeShop.png";
 import rmp from '../assets/rmp.png'
+import craftsmith from '../assets/craftsmith.png'
 
 const projects = [
   {
     name: "Fake shop",
     image: fakeshop,
     tech: "Html, Css, JavaScript, React",
-    para: ' High-performance e-commerce website using React, integrating seamlessly with the "Fakestoreapi" through Axios to bring dynamic and up-to-date product data to users. Implemented responsive design principles and optimized loading times for all pages, resulting in a faster browsing experience.',
+    para: ' High-performance e-commerce website using React, integrating seamlessly with the "Fakestoreapi" through Axios to bring dynamic and up-to-date product data to users. Implemented responsive design principles and optimized loading times for all pages.',
     github: "https://github.com/Abde-T/Fake-shop",
     link: "https://fake-shop-three.vercel.app/",
   },
@@ -37,7 +38,7 @@ const projects = [
     name: "Movie heaven",
     image: movieheaven,
     tech: " Nextjs, Redux, Firebase, TailwindCss ",
-    para: " A dynamic and visually stunning movie application using Next.js, Redux, Firebase, and TMDB API that provides seamless browsing experience for all users Implemented advanced pagination functionality allowing easy navigation through the extensive movie collections.",
+    para: " A dynamic and visually stunning movie application using Next.js, Redux, Firebase, and TMDB API that provides seamless browsing experience for all users.",
     github: "https://github.com/Abde-T/movieheaven",
     link: "https://movieheaven.vercel.app/",
   },
@@ -48,6 +49,14 @@ const projects = [
     para: 'Developed a high-performance website using the MERN stack, allowing developers to create an account and upload their Projects for review, providing a platform for showcasing their skills and receiving feedback from peers.',
     github: "https://github.com/Abde-T/rmp",
     link: "https://rmp-abde-t.vercel.app/",
+  },
+  {
+    name: "Craftsmith",
+    image: craftsmith,
+    tech: "Nextjs 13, Material Ui, Firebase",
+    para: 'Multilingual collaborative project with filtering options, optimized web performance, and more features under development, made with Next.js 13.',
+    github: "https://github.com/Abde-T/craftsmith-application",
+    link: "https://craftsmith.vercel.app/",
   },
 
 ];

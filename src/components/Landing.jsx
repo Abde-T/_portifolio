@@ -5,7 +5,7 @@ import Nav from './Nav';
 
 function Landing({toggleTheme, theme}) {
     return (
-        <section>
+        <section className='star_bg'>
            <Nav theme ={theme} toggleTheme={toggleTheme} />
            <Container/>
         </section>

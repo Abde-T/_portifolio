@@ -1,6 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import github from "../assets/github.png";
 import { projects } from "../contants";
 import ProjectCard from "../ui/ProjectCard"
 
