@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import github from "../assets/github.png";
 const ProjectCard = ({ project }) => {
   return (
-    <article className="card" data-aos="zoom-out-right" data-aos-once="true">
+    <article className="card " data-aos="zoom-out-right" data-aos-once="true">
       <div>
         <img
           src={project.image}
