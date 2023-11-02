@@ -32,9 +32,9 @@ const Container = () => {
             </h1>
 
             <p className="header__para">
-              I am a <b className="blue">Self-Taught developer, </b> With a
-              strong passion for building <b className="blue"> web applications </b>{" "}
-              with a  <b className="blue"> responsive </b>and <b className="blue"> interactive </b> design.
+            I'm a highly motivated and results-oriented aspiring <b className="blue"> software engineer </b>
+            with a passion for building innovative and user-friendly <b className="blue"> web applications </b>{" "}
+            with a  <b className="blue"> responsive </b>and <b className="blue"> interactive </b> design.
             </p>
             <div className="social__list">
               <a
