@@ -52,7 +52,7 @@ function Modal({ closeModal }) {
             Passionate and highly motivated individual looking for a role as a
             <span className="blue"> Software Engineer </span>I thrive on learning
             <span className="blue"> new technologies</span> and possess the
-            ability to <span className="blue"> work independently</span>, adapt
+            ability to work <span className="blue"> independently</span> or in a <span className="blue">team</span> environment, adapt
             quickly to unconventional situations, and broaden my skill set. I am
             excited to contribute my expertise and dedication to your
             organization. Let's <span className="blue"> connect</span> and

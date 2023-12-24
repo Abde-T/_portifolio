@@ -12,7 +12,7 @@ import {
   faArrowUp,
   faCircleExclamation,
   faMoon, 
-  faSun
+  faSun,
 } from "@fortawesome/free-solid-svg-icons";
 library.add(faLink,faCircleExclamation, faMoon, faSun, faAdjust,faFilePdf, faSpinner, faTimes, faArrowUp);
 

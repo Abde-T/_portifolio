@@ -3,6 +3,7 @@ import logo from "../assets/logo.png";
 import Modal from "../ui/Modal";
 import ReactSwitch from "react-switch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 function Nav({ toggleTheme, theme }) {
   const [openModal, setOpenModal] = useState(false);
@@ -19,9 +20,9 @@ function Nav({ toggleTheme, theme }) {
     <div className="nav__wrapper">
       <div className="row">
         <nav>
-          <figure>
-            <img src={logo} alt="logo" className="logo" />
-          </figure>
+          <Link to='/'>
+              <img src={logo} alt="logo" className="logo" />
+          </Link>
           <ul className="nav__link--list">
             <li className="nav__link">
               <a
