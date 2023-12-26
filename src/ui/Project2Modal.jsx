@@ -311,10 +311,10 @@ const Project2Modal = ({ closeModal }) => {
               of challenge for players.
             </p>
             <div className="links">
-              <Link to="https://github.com/Abde-T/Pong">
+              <Link to="https://github.com/Abde-T/Pong" target="_blank">
                 <button className="btn-"> Download game</button>
               </Link>
-              <Link to="https://github.com/Abde-T/Pong">
+              <Link to="https://github.com/Abde-T/Pong" target="_blank">
                 <button className="github_btn">
                   <img src={github} alt="" className="github-" />
                 </button>

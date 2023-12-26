@@ -37,10 +37,10 @@ function ProjectModal({ closeModal }) {
               environment for feedback and improvement.
             </p>
             <div className="links">
-              <Link to="https://rmp-abde-t.vercel.app/">
+              <Link to="https://rmp-abde-t.vercel.app/" target="_blank">
                 <button className="btn">Check Website</button>
               </Link>
-              <Link to="https://github.com/Abde-T/rmp">
+              <Link to="https://github.com/Abde-T/rmp" target="_blank">
                 <button className="github_btn">
                   <img src={github} alt="" className="github" />
                 </button>
