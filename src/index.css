@@ -380,11 +380,11 @@ footer {
 .project_modal{
 
   position: absolute;
-  top: 168%;
+  top: 178%;
   left: 0;
   overflow-y: scroll;
   width: 100%;
-  height: 100%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -421,10 +421,10 @@ footer {
   padding: 5rem 1rem;
 }
 .details_container{
-  margin: 250px 0 0 0;
+  margin: 50px 0 -150px 0;
 }
 .details_container-{
-  margin: 250px 0 0px 0;
+  margin: 0px 0 0px 0;
 }
 .section__header {
   margin-bottom: 1rem;
@@ -1105,8 +1105,8 @@ button {
     margin: 200px 0 0 0;
   }
   .project_modal{
-    top: 169%;
-    height: 90%;
+    top: 175%;
+    height: 75%;
   }
   .card {
     height: 470px;
@@ -1114,15 +1114,18 @@ button {
 }
 @media (max-width: 1150px) {
   .details_container{
-    margin: 300px 0 0 0;
+    margin: 300px 0 -100px 0;
+  }
+  .details_container-{
+    margin: 200px 0 0px 0;
   }
   }
 @media (max-width: 1050px) {
 .project_modal{
-  top: 168%;
+  top: 175%;
 }
 .details_container{
-  margin: 400px 0 0 0;
+  margin: 400px 0 -150px 0;
 }
 .details_container-{
   margin: 300px 0 0px 0;
@@ -1150,12 +1153,21 @@ button {
     height: 370px;
   }
   .details_container{
-    margin: 500px 0 250px 0;
+    margin: 500px 0 -150px 0;
   }
   .details_container-{
     margin: 400px 0 0px 0;
   }
 }
+@media (max-width: 850px) {
+
+  .details_container{
+    margin: 400px 0 150px 0;
+  }
+  .details_container-{
+    margin: 300px 0 0px 0;
+  }
+  }
 @media (max-width: 750px) {
   .modal__wrapper,
   .modal {
@@ -1197,8 +1209,8 @@ button {
     height: 100px;
   }
   .project_modal{
-    top: 167%;
-    height: 75%;
+    top: 170%;
+    height: 65%;
   }
   .card {
     width: 48%;
@@ -1213,7 +1225,7 @@ button {
   }
 
   .details_container{
-    margin: 400px 0 400px 0;
+    margin: 500px 0 400px 0;
   }
 }
 
@@ -1224,7 +1236,7 @@ button {
     background-color: #242424;
   }
   .details_container{
-    margin: 400px 0 300px 0;
+    margin: 400px 0 150px 0;
   }
 }
 @media (max-width: 650px) {
@@ -1287,6 +1299,10 @@ button {
   .details_container{
     margin: 700px 0 200px 0;
   }
+  .project_modal{
+    top: 170%;
+    height: 75%;
+  }
 
 }
 
@@ -1337,7 +1353,7 @@ button {
   }
   .project_modal{
     top: 172%;
-    height: 150%;
+    height: 65%;
   }
 }
 
@@ -1395,8 +1411,8 @@ button {
     font-size: 25px;
   }
   .project_modal{
-    top: 167%;
-    height: 130%;
+    top: 192%;
+    height: 95%;
   }
 } 
 @media (width < 450px) {
@@ -1404,14 +1420,14 @@ button {
     margin: 1550px 0 450px 0;
   }
   .details_container-{
-    margin: 600px 0 300px 0;
+    margin: 600px 0 500px 0;
   }
   .card {
     width: 100%;
     height: 300px;
   }
   .project_modal{
-    top: 175%;
-    height: 120%;
+    top: 205%;
+    height: 80%;
   }
 }
