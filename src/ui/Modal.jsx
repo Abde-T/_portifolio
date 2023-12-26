@@ -59,7 +59,7 @@ function Modal({ closeModal }) {
             explore how my skills can help drive success and innovation.
           </p>
           <div className="language__list ">
-            {technologies.slice(3, 7).map((technology) => (
+            {technologies.slice(4, 8).map((technology) => (
               <div className="language" key={technology.name}>
                 <figure className="language__img--wrapper">
                   <img
