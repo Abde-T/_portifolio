@@ -24,9 +24,11 @@ const technologies = [
   { name: "NodeJS", icon: Nodejs },
   { name: "NextJS", icon: next },
   { name: "TailwindCss", icon: tailwind },
+  
 ];
 
 import rmp from "../assets/rmp.gif";
+import fakeShop from "../assets/pj3.gif";
 
 const project1tech = [
   { name: "MongoDB", image: MongoBD },
@@ -41,7 +43,6 @@ const project1 = [
   {
     name: "Review My Project (RMP)",
     image: rmp,
-    para: "Developed a high-performance website using the MERN stack, allowing developers to create an account and upload their Projects for review, providing a platform for showcasing their skills and receiving feedback from peers.",
     github: "https://github.com/Abde-T/rmp",
     link: "https://rmp-abde-t.vercel.app/",
   },
@@ -50,7 +51,9 @@ const project1 = [
 const project2tech = [
   {name: "Python", image: Python },
   {name: "kivy", image: kivy },
+  
 ];
+
 const project2 = [
   {
     name: "Pong Game",
@@ -59,6 +62,23 @@ const project2 = [
     link: "https://rmp-abde-t.vercel.app/",
   },
 ];
+
+const project3 = [
+  {
+    name: "Fake Shop",
+    image: fakeShop,
+    github: "https://github.com/Abde-T/Fake-shop",
+    link: "https://fake-shop-three.vercel.app/",
+  },
+];
+
+const project3tech = [
+  { name: "HTML5", image: html },
+  { name: "CSS3", image: css },
+  { name: "JavaScript", image: javascript },
+  { name: "ReactJS", image: reactjs },
+];
+
 const pj1_features = [
   {
     h1: "User Authentication",
@@ -117,14 +137,40 @@ const pj2_features = [
   },
 ];
 
+const pj3_features = [
+  {
+    h1: "React Framework",
+    p: " Implemented the project using the React framework, ensuring a modular and efficient front-end structure.",
+  },
+  {
+    h1: "Fake Store API Integration",
+    p: "Utilized the Fake Store API to dynamically fetch and display product information, including images, descriptions, and prices, offering users a realistic shopping experience.",
+  },
+  {
+    h1: "Pagination",
+    p: "Implemented a robust pagination system, enabling users to navigate seamlessly through different product pages, improving overall user experience.",
+  },
+  {
+    h1: "Shopping Cart Functionality",
+    p: "Developed a user-friendly shopping cart feature that allows users to add, remove, and view selected items. The cart displays a summary of products along with their individual prices and a total amount.",
+  },
+  {
+    h1: "Responsive Design",
+    p: "Ensured a responsive design to provide a consistent and visually appealing experience across various devices, including desktops, tablets, and mobile phones.",
+  },
+];
+
 
 
 export {
   project1,
   project2,
+  project3,
   technologies,
   pj2_features,
   pj1_features,
   project1tech,
   project2tech,
+  project3tech,
+  pj3_features
 };

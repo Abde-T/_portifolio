@@ -17,7 +17,7 @@ const Project2Card = ({ project }) => {
         <div>
           <img
             src={project.image}
-            className="project__img"
+            className="project__img unselectable"
             alt={project.name}
             loading="lazy"
             onClick={openModalClick}
@@ -34,7 +34,7 @@ const Project2Card = ({ project }) => {
                   <img
                     src={project.image}
                     alt={project.name}
-                    className="card_tech"
+                    className="card_tech unselectable"
                     loading="lazy"
                   />
                 </div>

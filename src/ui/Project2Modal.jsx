@@ -316,13 +316,13 @@ const Project2Modal = ({ closeModal }) => {
               </Link>
               <Link to="https://github.com/Abde-T/Pong" target="_blank">
                 <button className="github_btn">
-                  <img src={github} alt="" className="github-" />
+                  <img src={github} alt="" className="github- unselectable" loading="lazy"/>
                 </button>
               </Link>
             </div>
           </div>
           <div className="header_image">
-            <img src={pj2} alt="logo" className="landing" />
+            <img src={pj2} alt="logo" className="landing unselectable" loading="lazy"/>
           </div>
         </header>
         <section className="section__container explore__container">
@@ -341,7 +341,7 @@ const Project2Modal = ({ closeModal }) => {
         <section className="section__container class__container details_container-">
           <div className="class__image">
             <span className="bg__blur "></span>
-            <img src={pongGame} alt="class" className="class__img-2" />
+            <img src={pongGame} alt="class" className="class__img-2 unselectable" loading="lazy"/>
           </div>
           <div className="class__content">
             <h2 className="section__header">The Pong Game App</h2>

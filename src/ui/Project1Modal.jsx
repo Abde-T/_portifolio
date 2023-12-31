@@ -42,13 +42,13 @@ function ProjectModal({ closeModal }) {
               </Link>
               <Link to="https://github.com/Abde-T/rmp" target="_blank">
                 <button className="github_btn">
-                  <img src={github} alt="" className="github" />
+                  <img src={github} alt="" className="github unselectable" loading="lazy"/>
                 </button>
               </Link>
             </div>
           </div>
           <div className="header__image">
-            <img src={pj1} alt="logo" className="landing" />
+            <img src={pj1} alt="logo" className="landing unselectable" loading="lazy" />
           </div>
         </header>
         <section className="section__container explore__container">
@@ -67,7 +67,7 @@ function ProjectModal({ closeModal }) {
         <section className="section__container class__container details_container">
           <div className="class__image">
             <span className="bg__blur"></span>
-            <img src={rmpPhone} alt="class" className="class__img-1" />
+            <img src={rmpPhone} alt="class" className="class__img-1 unselectable" loading="lazy"/>
           </div>
           <div className="class__content ">
             <h2 className="section__header ">The RMP CRUD website</h2>
@@ -84,7 +84,7 @@ function ProjectModal({ closeModal }) {
           </div>
         </section>
         <div className="laptop_gif ">
-          <img src={laptop} alt="class " />
+          <img src={laptop} className="unselectable" alt="class " loading="lazy"/>
         </div>
         <span className="bg__blur"></span>
         

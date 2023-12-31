@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { project1, project2 } from "../contants";
+import { project1, project2, project3 } from "../contants";
 import Project1Card from "../ui/Project1Card"
 import Project2Card from "../ui/Project2Card"
+import Project3Card from "../ui/Project3Card"
 
 function Projects() {
   
@@ -19,6 +20,10 @@ function Projects() {
 
             {project2.map((project) => (
               <Project2Card project={project} key={project.name} />
+            ))}
+
+            {project3.map((project) => (
+              <Project3Card project={project} key={project.name} />
             ))}
           </div>
           
