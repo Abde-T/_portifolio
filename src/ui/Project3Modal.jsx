@@ -1,11 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { pj3_features } from "../contants";
-import fakeShop from "../assets/pj3.gif";
-import phone from "../assets/pj3p.png";
-import ui from "../assets/pj3u.png";
-import github from "../assets/github.png";
+
 
 function ProjectModal({ closeModal }) {
   return (
@@ -43,7 +40,7 @@ function ProjectModal({ closeModal }) {
               <Link to="https://github.com/Abde-T/Fake-shop" target="_blank">
                 <button className="github_btn">
                   <img
-                    src={github}
+                    src='https://ik.imagekit.io/lqn2gvopq/github.png?updatedAt=1704352962522'
                     alt=""
                     className="github- unselectable"
                     loading="lazy"
@@ -54,7 +51,7 @@ function ProjectModal({ closeModal }) {
           </div>
           <div className="header__image">
             <img
-              src={phone}
+              src='https://ik.imagekit.io/lqn2gvopq/pj3p.png?updatedAt=1704352965496'
               alt="logo"
               className="landing unselectable"
               loading="lazy"
@@ -78,7 +75,7 @@ function ProjectModal({ closeModal }) {
           <div className="class__image">
             <span className="bg__blur"></span>
             <img
-              src={ui}
+              src='https://ik.imagekit.io/lqn2gvopq/pj3u.png?updatedAt=1704352980659'
               alt="class"
               className="class__img-2 unselectable"
               loading="lazy"
@@ -100,7 +97,7 @@ function ProjectModal({ closeModal }) {
         </section>
         <div className="laptop_gif ">
           <img
-            src={fakeShop}
+            src='https://ik.imagekit.io/lqn2gvopq/pj3.gif?updatedAt=1704353426222'
             className="gif unselectable"
             alt="class "
             loading="lazy"

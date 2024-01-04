@@ -11,7 +11,7 @@ const Project3Card = ({ project }) => {
 
   return (
     <>
-      <div className="card " data-aos="zoom-out-right" data-aos-once="true">
+      <div className="card " data-aos="zoom-out-right" data-aos-once="true" onClick={openModalClick}>
         <div>
           <img
             src={project.image}

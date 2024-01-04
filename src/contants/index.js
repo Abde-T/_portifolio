@@ -1,17 +1,20 @@
-import css from "../assets/tech/css1.png";
-import html from "../assets/tech/html1.png";
-import javascript from "../assets/tech/js.png";
-import next from "../assets/tech/next1.png";
-import reactjs from "../assets/tech/react.png";
-import tailwind from "../assets/tech/tailwind.png";
-import MongoBD from "../assets/tech/mongodb.png";
-import Nodejs from "../assets/tech/nodejs.png";
-import Expressjs from "../assets/tech/expressjs.png";
-import mui from "../assets/tech/mui.png";
-import redux from "../assets/tech/redux.png";
-import Python from "../assets/tech/python.png";
-import kivy from "../assets/tech/kivy.png";
-import pong from "../assets/pong.gif";
+const fakeShop = "https://ik.imagekit.io/lqn2gvopq/pj3.gif?updatedAt=1704353426222"
+const rmp = 'https://ik.imagekit.io/lqn2gvopq/rmp.gif?updatedAt=1704353497565'
+const css = 'https://ik.imagekit.io/lqn2gvopq/css1.png?updatedAt=1704352972985'
+const html = 'https://ik.imagekit.io/lqn2gvopq/html1.png?updatedAt=1704352988720'
+const javascript = 'https://ik.imagekit.io/lqn2gvopq/js.png?updatedAt=1704352996156'
+const next = 'https://ik.imagekit.io/lqn2gvopq/next1.png?updatedAt=1704353007729'
+const reactjs = 'https://ik.imagekit.io/lqn2gvopq/react.png?updatedAt=1704353019160'
+const tailwind = 'https://ik.imagekit.io/lqn2gvopq/tailwind.png?updatedAt=1704353024228'
+const MongoBD = 'https://ik.imagekit.io/lqn2gvopq/mongodb.png?updatedAt=1704353002585'
+const Nodejs = 'https://ik.imagekit.io/lqn2gvopq/nodejs.png?updatedAt=1704353014426'
+const Expressjs = 'https://ik.imagekit.io/lqn2gvopq/expressjs.png?updatedAt=1704352981173'
+const mui = 'https://ik.imagekit.io/lqn2gvopq/mui.png?updatedAt=1704353008343'
+const redux = 'https://ik.imagekit.io/lqn2gvopq/redux.png?updatedAt=1704353023216'
+const Python = 'https://ik.imagekit.io/lqn2gvopq/python.png?updatedAt=1704353016286'
+const kivy = 'https://ik.imagekit.io/lqn2gvopq/kivy.png?updatedAt=1704352998604'
+const pong = 'https://ik.imagekit.io/lqn2gvopq/pong.gif?updatedAt=1704353477931'
+
 
 const technologies = [
   { name: "HTML5", icon: html },
@@ -26,9 +29,6 @@ const technologies = [
   { name: "TailwindCss", icon: tailwind },
   
 ];
-
-import rmp from "../assets/rmp.gif";
-import fakeShop from "../assets/pj3.gif";
 
 const project1tech = [
   { name: "MongoDB", image: MongoBD },

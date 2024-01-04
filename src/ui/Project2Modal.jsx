@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import pj2 from "../assets/pj2.gif";
 import { pj2_features } from "../contants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CopyAllIcon from '@mui/icons-material/CopyAll';
-import github from "../assets/github.png";
 import pongGame from '../assets/pongGame.gif'
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { base16AteliersulphurpoolLight } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -316,13 +314,13 @@ const Project2Modal = ({ closeModal }) => {
               </Link>
               <Link to="https://github.com/Abde-T/Pong" target="_blank">
                 <button className="github_btn">
-                  <img src={github} alt="" className="github- unselectable" loading="lazy"/>
+                  <img src='https://ik.imagekit.io/lqn2gvopq/github.png?updatedAt=1704352962522' alt="" className="github- unselectable" loading="lazy"/>
                 </button>
               </Link>
             </div>
           </div>
           <div className="header_image">
-            <img src={pj2} alt="logo" className="landing unselectable" loading="lazy"/>
+            <img src='https://ik.imagekit.io/lqn2gvopq/pj2.gif?updatedAt=1704353505785' alt="logo" className="landing unselectable" loading="lazy"/>
           </div>
         </header>
         <section className="section__container explore__container">

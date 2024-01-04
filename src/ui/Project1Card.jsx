@@ -12,14 +12,14 @@ const Project1Card = ({ project }) => {
 
   return (
     <>
-      <div className="card " data-aos="zoom-out-right" data-aos-once="true">
+      <div className="card " data-aos="zoom-out-right" data-aos-once="true" onClick={openModalClick}>
         <div>
           <img
             src={project.image}
             className="project__img unselectable"
             alt={project.name}
             loading="lazy"
-            onClick={openModalClick}
+            
           />
         </div>
         <div className="card_content">

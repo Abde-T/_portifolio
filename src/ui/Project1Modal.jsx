@@ -1,11 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import pj1 from "../assets/pj1.gif";
 import { Link } from "react-router-dom";
 import { pj1_features } from "../contants";
-import rmpPhone from "../assets/rmpPhone.gif";
-import laptop from "../assets/laptop.gif";
-import github from "../assets/github.png";
+
 
 function ProjectModal({ closeModal }) {
   return (
@@ -42,13 +39,13 @@ function ProjectModal({ closeModal }) {
               </Link>
               <Link to="https://github.com/Abde-T/rmp" target="_blank">
                 <button className="github_btn">
-                  <img src={github} alt="" className="github unselectable" loading="lazy"/>
+                  <img src='https://ik.imagekit.io/lqn2gvopq/github.png?updatedAt=1704352962522' alt="" className="github unselectable" loading="lazy"/>
                 </button>
               </Link>
             </div>
           </div>
           <div className="header__image">
-            <img src={pj1} alt="logo" className="landing unselectable" loading="lazy" />
+            <img src='https://ik.imagekit.io/lqn2gvopq/pj1.gif?updatedAt=1704353277137' alt="logo" className="landing unselectable" loading="lazy" />
           </div>
         </header>
         <section className="section__container explore__container">
@@ -67,7 +64,7 @@ function ProjectModal({ closeModal }) {
         <section className="section__container class__container details_container">
           <div className="class__image">
             <span className="bg__blur"></span>
-            <img src={rmpPhone} alt="class" className="class__img-1 unselectable" loading="lazy"/>
+            <img src=' https://ik.imagekit.io/lqn2gvopq/rmpPhone.gif?updatedAt=1704353504272' alt="class" className="class__img-1 unselectable" loading="lazy"/>
           </div>
           <div className="class__content ">
             <h2 className="section__header ">The RMP CRUD website</h2>
@@ -84,7 +81,7 @@ function ProjectModal({ closeModal }) {
           </div>
         </section>
         <div className="laptop_gif ">
-          <img src={laptop} className="unselectable" alt="class " loading="lazy"/>
+          <img src='https://ik.imagekit.io/lqn2gvopq/laptop.gif?updatedAt=1704353117914' className="unselectable" alt="class " loading="lazy"/>
         </div>
         <span className="bg__blur"></span>
         
