@@ -34,11 +34,12 @@ const Project3Card = ({ project }) => {
                     alt={project.name}
                     className="card_tech unselectable"
                     loading="lazy"
-                  />
+                    />
                 </div>
                 <span className="language__name"> {project.name}</span>
               </div>
             ))}
+            <button className="pj_button" onClick={openModalClick}> See More </button>
           </div>
         </div>
       </div>

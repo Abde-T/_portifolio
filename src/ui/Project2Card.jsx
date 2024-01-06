@@ -17,7 +17,7 @@ const Project2Card = ({ project }) => {
         <div>
           <img
             src={project.image}
-            className="project__img unselectable"
+            className="project__img pj2-img unselectable"
             alt={project.name}
             loading="lazy"
             onClick={openModalClick}
@@ -42,6 +42,7 @@ const Project2Card = ({ project }) => {
               </div>
             ))}
           </div>
+          <button className="pj_button" onClick={openModalClick}> See More </button>
         </div>
       </div>
       {openModal && <Project2Modal closeModal={() => setOpenModal(false)} />}

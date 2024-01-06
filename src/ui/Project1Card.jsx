@@ -41,6 +41,8 @@ const Project1Card = ({ project }) => {
               </div>
             ))}
           </div>
+          <button className="pj_button" onClick={openModalClick}> See More </button>
+
         </div>
       </div>
       {openModal && <Project1Modal closeModal={() => setOpenModal(false)} />}

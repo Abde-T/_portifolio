@@ -3,268 +3,379 @@ import { Link } from "react-router-dom";
 import { pj2_features } from "../contants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CopyAllIcon from '@mui/icons-material/CopyAll';
-import pongGame from '../assets/pongGame.gif'
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { base16AteliersulphurpoolLight } from "react-syntax-highlighter/dist/esm/styles/prism";
-
+import snake from'../assets/snake.png'
+import snake1 from'../assets/snake3.png'
 
 const Project2Modal = ({ closeModal }) => {
   const [selectedLanguage, setSelectedLanguage] = useState("python");
-  const pythonCode = `from kivy.config import Config
-  Config.set('graphics', 'width', '900')
-  Config.set('graphics', 'height', '400')
-  Config.set('graphics', 'resizable', False)
-  from kivy.app import App
-  from kivy.uix.widget import Widget
-  from kivy.properties import NumericProperty, StringProperty, ReferenceListProperty, ObjectProperty
-  from kivy.vector import Vector
-  from kivy.clock import Clock
-  from kivy.uix.relativelayout import RelativeLayout
-  from kivy.core.audio import SoundLoader
+  const pythonCode = `import pygame, sys, random, asyncio
+  from pygame.math import Vector2
+    
+    
+    class SNAKE:
+        def __init__(self, is_ai=False):
+            self.is_ai = is_ai
+            self.body = [Vector2(18, 5), Vector2(18, 4), Vector2(18, 3)] if is_ai else [Vector2(5, 10), Vector2(4, 10), Vector2(3, 10)]
+            self.direction = Vector2(0, 0)
+            self.new_block = False
+            self.load_images()
+    
+        @staticmethod
+        def invert_image_colors(image):
+            pixels = pygame.PixelArray(image)
+            for x in range(image.get_width()):
+                for y in range(image.get_height()):
+                    r, g, b, a = image.get_at((x, y))
+                    inverted_color = (255 - r, 255 - g, 255 - b, a)
+                    pixels[x, y] = inverted_color
+            del pixels
+            return image
+        
+        def load_images(self):
+            paths = [
+                'head_up', 'head_down', 'head_right', 'head_left',
+                'tail_up', 'tail_down', 'tail_right', 'tail_left',
+                'body_vertical', 'body_horizontal',
+                'body_topright', 'body_topleft', 'body_bottomright', 'body_bottomleft'
+            ]
+    
+            for path in paths:
+                setattr(self, path, pygame.image.load(f'./Graphics/{path}.png').convert_alpha())
   
-  
-  WINNING_SCORE = 5
-  
-  class MenuWidget(RelativeLayout):
-          def on_touch_down(self, touch):
-              if self.opacity == 0:
-                  return False
-              return super(RelativeLayout, self).on_touch_down(touch)
-          
-  class PongGame(Widget):
-      ball = ObjectProperty(None)
-      player1 = ObjectProperty(None)
-      player2 = ObjectProperty(None)
-      menu_title = StringProperty('P  O  N  G')
-      menu_button_title = StringProperty('START')
-      state_game_has_started = False
-      state_game_over = False
-      sound_hit = SoundLoader.load("RESOURCES/audio/hit.wav")
-      sound_loss = SoundLoader.load("RESOURCES/audio/loss.wav")
-      sound_won = SoundLoader.load("RESOURCES/audio/won.wav")
-      sound_play = SoundLoader.load("RESOURCES/audio/play.wav")
-  
-      def __init__(self, **kwargs):
-          super(PongGame, self).__init__(**kwargs)
-          self.reset_game()
-  
-  
-      def serve_ball(self, vel=(4, 0)):
-          self.ball.center = self.center
-          self.ball.velocity = vel
-  
-      def update(self, dt):
-          if not self.state_game_over:
-  
-              self.ball.move()
-  
-              # player2 Ai
-              if self.ball.x > self.width / 2:
-                  if self.ball.center_y > self.player2.center_y + self.player2.height / 2:
-                      self.player2.move_up()
-                  elif self.ball.center_y < self.player2.center_y - self.player2.height / 2:
-                      self.player2.move_down()
-  
-              # Bounce off paddles
-              self.player1.bounce_ball(self.ball)
-              self.player2.bounce_ball(self.ball)
-  
-              # Bounce ball off bottom or top
-              if (self.ball.y < self.y) or (self.ball.top > self.top):
-                  self.ball.velocity_y *= -1
-  
-              # Went off to a side to score a point?
-              if self.ball.x < self.x:
-                  self.player2.score += 1
-                  self.serve_ball(vel=(4, 0))
-                  self.player1.center_y = self.center_y
-                  self.player2.center_y = self.center_y
-              if self.ball.right > self.width:
-                  self.player1.center_y = self.center_y
-                  self.player2.center_y = self.center_y
-                  self.player1.score += 1
-                  self.serve_ball(vel=(-4, 0))
-  
-              # Check for game over
-              if self.player1.score == WINNING_SCORE:
-                  self.end_game('YOU WON', self.sound_won)
-              elif self.player2.score == WINNING_SCORE:
-                  self.end_game('YOU LOST', self.sound_loss)
-  
-      def end_game(self, title, sound):
-          self.state_game_over = True
-          self.menu_title = f'GAME OVER {title}'
-          sound.play()
-          self.menu_button_title = 'RESTART'
-          self.menu_widget.opacity = 1
-          self.ball.center = self.center
-          print(title.lower())
-  
-      def on_touch_move(self, touch):
-          if touch.x < self.width / 3:
-              self.player1.move_down() if touch.y < self.player1.center_y else self.player1.move_up()
-         
-      def on_menu_button_pressed(self):
-          self.reset_game()
-          self.serve_ball()
-          self.state_game_has_started = True
-          self.menu_widget.opacity = 0
-          self.sound_play.play()
-  
-      def reset_game(self):
-          self.state_game_over = False
-          self.player1.score = 0
-          self.player2.score = 0
-          self.player1.center_y = self.center_y
-          self.player2.center_y = self.center_y
-  
-  
-      class PongPaddle(Widget):
-          score = NumericProperty(0)
-          sound_hit = SoundLoader.load("RESOURCES/audio/hit.wav")
-          sound_hit.volume = .5
-  
-          def bounce_ball(self, ball):
-              if self.collide_widget(ball):
-                  vx, vy = ball.velocity
-                  offset = (ball.center_y - self.center_y) / (self.height / 2)
-                  bounced = Vector(-1 * vx, vy)
-                  vel = bounced * 1.1
-                  ball.velocity = vel.x, vel.y + offset
-                  self.sound_hit.play()
-  
-          def move_up(self):
-              new_y = self.y + 10  
-              if new_y + self.height <= self.parent.height:
-                  self.y = new_y
-  
-          def move_down(self):
-              new_y = self.y - 10  
-              if new_y >= 0:
-                  self.y = new_y
-  
-      class PongBall(Widget):
-          velocity_x = NumericProperty(0)
-          velocity_y = NumericProperty(0)
-          velocity = ReferenceListProperty(velocity_x, velocity_y)
-  
-          def move(self):
-              self.pos = Vector(*self.velocity) + self.pos
-  
-  
-  class PongApp(App):
-      def build(self):
-          game = PongGame()
-          Clock.schedule_interval(game.update, 1.0 / 60.0)
-          return game
-  
-  if __name__ == '__main__':
-      PongApp().run()
-  `;
-  const kivyCode = `#:kivy 1.0.9
+                image = pygame.image.load(f'./Graphics/{path}.png').convert_alpha()
+                inverted_image = self.invert_image_colors(image)
+                setattr(self, f"{path}_ai", inverted_image)
+    
+            self.hit = pygame.mixer.Sound('./hit.wav')
+    
+        def draw_snake(self):
+            self.update_head_graphics()
+            self.update_tail_graphics()
+    
+            for index, block in enumerate(self.body): 
+                x_pos = block.x * cell_size
+                y_pos = block.y * cell_size   
+                block_rect = pygame.Rect(x_pos,y_pos , cell_size, cell_size)
+    
+                if index == 0: 
+                    screen.blit(self.head ,block_rect)
+                elif index == len(self.body) - 1:
+                    screen.blit(self.tail, block_rect)
+                else:
+                    previous_block = self.body[index + 1] - block 
+                    next_block = self.body[index - 1] - block 
+                    if previous_block.x == next_block.x:
+                        if self.is_ai:
+                            screen.blit(self.body_vertical_ai, block_rect)
+                        else:
+                            screen.blit(self.body_vertical, block_rect)
+                    elif previous_block.y == next_block.y:
+                        if self.is_ai:
+                            screen.blit(self.body_horizontal_ai, block_rect)
+                        else:
+                            screen.blit(self.body_horizontal, block_rect)
+                    else:
+                        if previous_block.x == -1 and next_block.y == -1 or previous_block.y == -1 and next_block.x == -1:    
+                            if self.is_ai:
+                                screen.blit(self.body_topleft_ai, block_rect)
+                            else:
+                                screen.blit(self.body_topleft, block_rect)
+                        elif previous_block.x == 1 and next_block.y == -1 or previous_block.y == -1 and next_block.x == 1:    
+                            if self.is_ai:
+                                screen.blit(self.body_topright_ai, block_rect)
+                            else:
+                                screen.blit(self.body_topright, block_rect)
+                        elif previous_block.x == 1 and next_block.y == 1 or previous_block.y == 1 and next_block.x == 1:    
+                            if self.is_ai:
+                                screen.blit(self.body_bottomright_ai, block_rect)
+                            else:
+                                screen.blit(self.body_bottomright, block_rect)
+                        elif previous_block.x == -1 and next_block.y == 1 or previous_block.y == 1 and next_block.x == -1:    
+                            if self.is_ai:
+                                screen.blit(self.body_bottomleft_ai, block_rect)
+                            else:
+                                screen.blit(self.body_bottomleft, block_rect)
+                
+    
+        def update_head_graphics(self):
+            head_relation = self.body[1] - self.body[0]
+            if head_relation == Vector2(1,0): 
+                if self.is_ai:
+                    self.head = self.head_left_ai
+                else:
+                    self.head = self.head_left
+            elif head_relation == Vector2(-1,0): 
+                if self.is_ai:
+                    self.head = self.head_right_ai
+                else:
+                    self.head = self.head_right
+            elif head_relation == Vector2(0,1): 
+                if self.is_ai:
+                    self.head = self.head_up_ai
+                else:
+                    self.head = self.head_up
+            elif head_relation == Vector2(0,-1): 
+                if self.is_ai:
+                    self.head = self.head_down_ai
+                else:
+                    self.head = self.head_down
+    
+        def update_tail_graphics(self):
+            tail_relation = self.body[-2] - self.body[-1]
+            if tail_relation == Vector2(1,0): 
+                if self.is_ai:
+                    self.tail = self.tail_left_ai
+                else:
+                    self.tail = self.tail_left
+            elif tail_relation == Vector2(-1,0): 
+                if self.is_ai:
+                    self.tail = self.tail_right_ai
+                else:
+                    self.tail = self.tail_right
+            elif tail_relation == Vector2(0,1): 
+                if self.is_ai:
+                    self.tail = self.tail_up_ai
+                else:
+                    self.tail = self.tail_up
+            elif tail_relation == Vector2(0,-1): 
+                if self.is_ai:
+                    self.tail = self.tail_down_ai
+                else:
+                    self.tail = self.tail_down
+       
+        def move_snake(self, fruit_position):
+            if self.is_ai:
+                to_fruit= fruit_position - self.body[0]
+                if to_fruit.x > 0:
+                    self.direction = Vector2(1, 0)
+                elif to_fruit.x < 0:
+                    self.direction = Vector2(-1, 0)
+                elif to_fruit.y > 0:
+                    self.direction = Vector2(0, 1) 
+                elif to_fruit.y < 0:
+                    self.direction = Vector2(0, -1)
+    
+                if self.new_block == True:
+                    body_copy = self.body[:]
+                    body_copy.insert(0, body_copy[0] + self.direction)
+                    self.body = body_copy[:] 
+                    self.new_block = False
+                else:
+                    body_copy = self.body[:-1]
+                    body_copy.insert(0, body_copy[0] + self.direction)
+                    self.body = body_copy[:] 
+            else:
+                if self.new_block == True:
+                    body_copy = self.body[:]
+                    body_copy.insert(0, body_copy[0] + self.direction)
+                    self.body = body_copy[:] 
+                    self.new_block = False
+                else:
+                    body_copy = self.body[:-1]
+                    body_copy.insert(0, body_copy[0] + self.direction)
+                    self.body = body_copy[:] 
+    
+        def add_block(self):
+            self.new_block = True
+    
+        def play_sound(self):
+            self.hit.play()    
+        
+        def reset(self):
+            self.direction = Vector2(0,0)
+            if self.is_ai:
+                self.body = [Vector2(18,5), Vector2(18,4), Vector2(18,3)]
+            else:
+                self.body = [Vector2(5,10), Vector2(4,10), Vector2(3,10)]
+    
+    class Fruit:
+        def __init__(self):
+            self.randomize()
+    
+        def draw_fruit(self):
+            fruit_rect = pygame.Rect(self.pos.x * cell_size, self.pos.y * cell_size, cell_size, cell_size)
+            screen.blit(apple, fruit_rect)
+    
+        def randomize(self):
+            self.x = random.randint(0, cell_number - 1)
+            self.y = random.randint(0, cell_number - 1)
+            self.pos = Vector2(self.x, self.y)
+    
+    class MAIN:
+        def __init__(self):
+            self.snake = SNAKE()
+            self.snake_ai = SNAKE(is_ai=True)
+            self.fruit = Fruit()
+            
+        def update(self):
+            fruit_position = self.fruit.pos
+            self.snake.move_snake(fruit_position)
+            self.snake_ai.move_snake(fruit_position)
+            self.check_collision()
+            self.check_fail()
+    
+        def draw_elements(self):
+            self.draw_grass()
+            self.fruit.draw_fruit()
+            self.snake.draw_snake()
+            self.snake_ai.draw_snake()
+            self.draw_score()
+    
+        def check_collision(self):
+            if self.fruit.pos == self.snake.body[0]:
+                self.fruit.randomize()
+                self.snake.add_block()
+                self.snake.play_sound()
+            elif self.fruit.pos == self.snake_ai.body[0]:
+                self.fruit.randomize()
+                self.snake_ai.add_block()
+                self.snake_ai.play_sound()
+    
+            
+            for block in self.snake.body[1:] or block in self.snake_ai.body[1:]:
+                if block == self.fruit.pos:
+                    self.fruit.randomize()
+    
+        def check_fail(self):
+            if not 0 <= self.snake.body[0].x < cell_number or not 0 <= self.snake.body[0].y < cell_number:
+                    self.game_over()
+    
+            if not 0 <= self.snake_ai.body[0].x < cell_number or not 0 <= self.snake_ai.body[0].y < cell_number:
+                    self.ai_game_over()
+            
+            for block in self.snake.body[1:]:
+                if self.snake.body[0] == block:
+                    self.game_over()
+            
+            for block in self.snake_ai.body[1:]:
+                if self.snake_ai.body[0] == block:
+                    self.ai_game_over()
+    
+        def draw_grass(self):
+            grass_color = (10, 105, 50)
+            grass_color1 = (50, 120, 50)
+            for row in range(cell_number):
+                if row % 2 == 0:
+                    for col in range(cell_number):
+                        if col % 2 == 0:
+                            grass_rect = pygame.Rect(col * cell_size,row * cell_size , cell_size,cell_size)
+                            screen.blit(grassy, grass_rect)
+                else:
+                    for col in range(cell_number):
+                        if col % 2 != 0:
+                            grass_rect = pygame.Rect(col * cell_size,row * cell_size , cell_size,cell_size)
+                            screen.blit(grassy, grass_rect)
+    
+                if row % 2 != 0:
+                    for col in range(cell_number):
+                        if col % 2 == 0:
+                            grass_rect = pygame.Rect(col * cell_size,row * cell_size , cell_size,cell_size)
+                            screen.blit(stone, grass_rect)
+                else:
+                    for col in range(cell_number):
+                        if col % 2 != 0:
+                            grass_rect = pygame.Rect(col * cell_size,row * cell_size , cell_size,cell_size)
+                            screen.blit(stone, grass_rect)
+    
+                if row % 2 == 0:
+                    for col in range(cell_number):
+                        if col % 2 == 0:
+                            grass_rect = pygame.Rect(col * cell_size,row * cell_size , cell_size,cell_size)
+                            pygame.draw.rect(screen, grass_color1, grass_rect,2)
+                else:
+                    for col in range(cell_number):
+                        if col % 2 != 0:
+                            grass_rect = pygame.Rect(col * cell_size,row * cell_size , cell_size,cell_size)
+                            pygame.draw.rect(screen, grass_color1, grass_rect,1)
+                
+        
+        def draw_score(self):
+            score_text = 'score: ' + str(len(self.snake.body) - 3)
+            score_surface = game_font.render(score_text,True,(56,75,15))
+            score_x = int(cell_size + 60)
+            score_y = int(cell_size * cell_number - 40)
+            score_rect = score_surface.get_rect( center = (score_x, score_y))
+            apple_rect = apple.get_rect(midright = (score_rect.left, score_rect.centery))
+            bg_rect = pygame.Rect(apple_rect.left,apple_rect.top , apple_rect.width+score_rect.width+6, apple_rect.height)
+    
+            pygame.draw.rect(screen, (7,109,61), bg_rect)
+            screen.blit(score_surface, score_rect)
+            screen.blit(apple, apple_rect)
+            pygame.draw.rect(screen, (56,75,15), bg_rect, 2)
+    
+            computer_score_text = 'computer_score: ' + str(len(self.snake_ai.body) - 3)
+            computer_score_surface = game_font.render(computer_score_text,True,(56,75,15))
+            computer_score_x = int(cell_size * cell_number - 120)
+            computer_score_y = int(cell_size * cell_number - 40)
+            computer_score_rect = computer_score_surface.get_rect( center = (computer_score_x, computer_score_y))
+            apple1_rect = apple.get_rect(midright = (computer_score_rect.left, computer_score_rect.centery))
+            bg1_rect = pygame.Rect(apple1_rect.left,apple1_rect.top , apple1_rect.width+computer_score_rect.width+6, apple1_rect.height)
+    
+            pygame.draw.rect(screen, (7,109,61), bg1_rect)
+            screen.blit(computer_score_surface, computer_score_rect)
+            screen.blit(apple, apple1_rect)
+            pygame.draw.rect(screen, (56,75,15), bg1_rect, 2)
+    
+        def game_over(self):
+            self.snake.reset()     
+        def ai_game_over(self):
+            self.snake_ai.reset()  
+    
+    
+    
+    pygame.mixer.pre_init(44100, -16, 2, 512)
+    pygame.init()
+    
+    cell_size = 40
+    cell_number = 20
+    screen = pygame.display.set_mode((cell_number * cell_size, cell_number * cell_size))
+    clock = pygame.time.Clock()
+    apple = pygame.image.load('./Graphics/apple.png').convert_alpha()
+    stone = pygame.image.load('./Graphics/stone.png').convert_alpha()
+    grassy = pygame.image.load('./Graphics/grassy.png').convert_alpha()
+    game_font = pygame.font.Font(None,25)
+    
+    SCREEN_UPDATE = pygame.USEREVENT
+    pygame.time.set_timer(SCREEN_UPDATE, 150)
+    
+    main_game = MAIN()
+    
+    async def main():
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
+                if event.type == SCREEN_UPDATE:
+                    main_game.update()
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_UP:
+                        if main_game.snake.direction.y !=1:
+                            main_game.snake.direction = Vector2(0,-1)
+                    if event.key == pygame.K_DOWN:
+                        if main_game.snake.direction.y != -1:
+                            main_game.snake.direction = Vector2(0,1)
+                    if event.key == pygame.K_RIGHT:
+                        if main_game.snake.direction.x !=-1:
+                            main_game.snake.direction = Vector2(1,0)
+                    if event.key == pygame.K_LEFT:
+                        if main_game.snake.direction.x !=1:
+                            main_game.snake.direction = Vector2(-1,0)
+    
+            screen.fill((7,109,61))
+            main_game.draw_elements()
+            pygame.display.update()
+            clock.tick(60) 
+            await asyncio.sleep(0)
+    
+    asyncio.run(main())`;
 
-  <MenuWidget>:
-      size: 900,400
-      canvas:
-          Color:
-              rgba: 0,0,0,.8
-          Rectangle:
-              size: self.size
-              
-      Label:
-          font_size: dp(40)
-          font_name: 'RESOURCES/fonts/Sackers-Gothic-Std-Light.ttf'
-          text: root.parent.menu_title
-          pos_hint: {"center_x": .5, "center_y":.6}
-      
-      Label:
-          font_size: dp(15)
-          font_name: 'RESOURCES/fonts/Sackers-Gothic-Std-Light.ttf'
-          text: 'FIRST TO 5 WINS'
-          pos_hint: {"center_x": .5, "center_y":.47}
-  
-      Button:
-          font_size: dp(30)
-          font_name: 'RESOURCES/fonts/Eurostile.ttf'
-          text: root.parent.menu_button_title
-          pos_hint: {"center_x": .5, "center_y":.3}
-          size_hint: .2, .15
-          on_press: root.parent.on_menu_button_pressed()
-          background_normal: ''
-          background_color: 1,.3,.4,.85
-  
-  <PongBall>:
-      size: 70, 70 
-      canvas:
-          Ellipse:
-              pos: self.pos
-              size: self.size  
-              source:'RESOURCES/images/moon.png'        
-  
-  
-  <PongPaddle>:
-      size: 25, 150
-      canvas:
-          Color:
-              rgb: 1, 1, 1
-          Rectangle:
-              pos: self.pos
-              size: self.size
-              
-  
-  
-  <PongGame>:
-  
-      canvas.before:
-          Rectangle:
-              size: self.size
-              source:'RESOURCES/images/bg.jpg'
-          
-  
-      canvas:
-          Rectangle:
-              pos: self.center_x - 5, 0
-              size: 10, self.height
-      
-      ball: pong_ball
-      player1: player_left
-      player2: player_right
-      menu_widget: menu_widget
-  
-  
-      Label:
-          font_size: 70  
-          center_x: root.width / 2.5
-          top: root.top - 10
-          text: str(root.player1.score)
-          
-      Label:
-          font_size: 70  
-          center_x: root.width /1.7
-          top: root.top - 10
-          text: str(root.player2.score)
-      
-      PongBall:
-          id: pong_ball
-          center: self.parent.center
-      
-      PongPaddle:
-          id: player_left
-          x: self.width 
-          center_y: root.center_y
-  
-      PongPaddle:
-          id: player_right
-          x: root.width - self.width * 2
-          center_y: root.center_y
-      
-      MenuWidget:
-          id: menu_widget
-          center: self.parent.center
-  `;
+
   const [isCopied, setIsCopied] = useState(false);
   const handleCopyClick = () => {
-    const codeToCopy = selectedLanguage === "python" ? pythonCode : kivyCode;
+    const codeToCopy =pythonCode;
     const textArea = document.createElement("textarea");
     textArea.value = codeToCopy;
     document.body.appendChild(textArea);
@@ -299,20 +410,16 @@ const Project2Modal = ({ closeModal }) => {
             <span className="bg__blur"></span>
             <span className="bg__blur header__blur-"></span>
             <h1>
-              <div className="header__content-span"> Pong Game</div> App with AI
+              <div className="header__content-span"> Snake Game </div> App with AI
             </h1>
             <p>
-              The Pong Game App is a Python-based mobile application developed
-              using the Kivy framework, offering a modern and engaging gaming
-              experience. This classic Pong game is enhanced with the inclusion
-              of an Artificial Intelligence (AI) opponent, adding an extra layer
-              of challenge for players.
+            A classic Snake game enriched with a competitive edge, enabling players to engage in a thrilling race against an AI snake to consume apples and expand their length.
             </p>
             <div className="links">
-              <Link to="https://github.com/Abde-T/Pong" target="_blank">
+              <Link to="https://github.com/Abde-T/Snake" target="_blank">
                 <button className="btn-"> Download game</button>
               </Link>
-              <Link to="https://github.com/Abde-T/Pong" target="_blank">
+              <Link to="https://github.com/Abde-T/Snake" target="_blank">
                 <button className="github_btn">
                   <img src='https://ik.imagekit.io/lqn2gvopq/github.png?updatedAt=1704352962522' alt="" className="github- unselectable" loading="lazy"/>
                 </button>
@@ -320,7 +427,7 @@ const Project2Modal = ({ closeModal }) => {
             </div>
           </div>
           <div className="header_image">
-            <img src='https://ik.imagekit.io/lqn2gvopq/pj2.gif?updatedAt=1704353505785' alt="logo" className="landing unselectable" loading="lazy"/>
+            <img src={snake} alt="logo" className="landing unselectable" loading="lazy"/>
           </div>
         </header>
         <section className="section__container explore__container">
@@ -335,26 +442,9 @@ const Project2Modal = ({ closeModal }) => {
               </div>
             ))}
           </div>
-        </section>
-        <section className="section__container class__container details_container-">
-          <div className="class__image">
+          <div className="class__image pj2_img">
             <span className="bg__blur "></span>
-            <img src={pongGame} alt="class" className="class__img-2 unselectable" loading="lazy"/>
-          </div>
-          <div className="class__content">
-            <h2 className="section__header">The Pong Game App</h2>
-            <p>
-              Offers a blend of nostalgia and modern gaming, providing users
-              with an entertaining and challenging experience. The
-              implementation of an AI opponent showcases a commitment to pushing
-              the boundaries of traditional game development, offering users a
-              dynamic and adaptive gaming experience. The project highlights
-              expertise in Python and Kivy, illustrating the ability to create
-              engaging applications.
-            </p>
-            <Link to="https://rmp-abde-t.vercel.app/">
-              <button className="btn-">Download game</button>
-            </Link>
+            <img src={snake1} alt="class" className="class__img-2 unselectable" loading="lazy"/>
           </div>
         </section>
         <div className="code_wrapper">
@@ -370,16 +460,7 @@ const Project2Modal = ({ closeModal }) => {
               >
                 Python
               </button>
-              <button
-                className={
-                  selectedLanguage === "python"
-                    ? "selected-button"
-                    : "deselected-button"
-                }
-                onClick={() => setSelectedLanguage("kivy")}
-              >
-                Kivy
-              </button>
+              
             </div>
             {isCopied && (
               <span className="copy">
@@ -394,7 +475,7 @@ const Project2Modal = ({ closeModal }) => {
               style={base16AteliersulphurpoolLight}
               customStyle={{ padding: "25px", }}
             >
-              {selectedLanguage === "python" ? pythonCode : kivyCode}
+              {pythonCode} 
             </SyntaxHighlighter>
           </div>
         </div>
@@ -405,3 +486,4 @@ const Project2Modal = ({ closeModal }) => {
 };
 
 export default Project2Modal;
+
