@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
-import resume from "../assets/Abde-T resume.pdf";
+import resume from "../assets/resume.pdf";
 import StarsCanvas from "../threejs/Stars";
 import EarthCanvas from "../threejs/Earth";
 

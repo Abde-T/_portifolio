@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
-import resume from "../assets/Abde-T resume.pdf";
+import resume from "../assets/resume.pdf";
 import Modal from "../ui/Modal";
 
 function Footer() {

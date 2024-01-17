@@ -360,10 +360,8 @@ a {
   
 }
 .pj2-img{
-  width: 170%;
-  position: absolute;
-  left: -165px;
-  top: 0;
+  width: 100%;
+  margin-top: 50px;
 }
 footer {
   height: 300px;
@@ -445,6 +443,9 @@ footer {
 .details_container{
   margin: 50px 0 -150px 0;
 }
+.details_container--{
+  margin: -50px 0 0 0;
+}
 .details_container-{
   margin: 0px 0 0px 0;
 }
@@ -486,8 +487,8 @@ footer {
 }
 
 .explore__card-:hover {
-  background-color: #700404cb;
-  border-color: var(--secondary-color-dark);
+  background-color: #2e5070;
+  border-color: #3684ce;
 }
 
 .explore__card {
@@ -531,8 +532,8 @@ footer {
   height: 70%;
 }
 .pj2_img{
-  width: 80% ;
-  margin: 50px auto;
+  width: 70% ;
+  margin: 100px auto;
 }
 
 .class__image .class__img-1 {
@@ -541,6 +542,11 @@ footer {
   top: -100px;
   max-width: 400px;
   border-radius: 10px;
+}
+ .class__img- {
+  position: absolute;
+  right: 100px;
+  max-width: 250px;
 }
 
 
@@ -581,7 +587,7 @@ footer {
 }
 .github-{
   width: 100%;
-  filter: invert(20%) sepia(92%) saturate(7479%) hue-rotate(358deg) brightness(101%) contrast(110%);
+  filter: invert(29%) sepia(15%) saturate(1511%) hue-rotate(168deg) brightness(97%) contrast(97%);
 }
 .links{
   display: flex;
@@ -599,7 +605,7 @@ footer {
   font-weight: 600;
 }
 .btn-{
-  background-color: #ff0000;
+  background-color: #2e5070;
   color: var(--white);
 }
 .btn-:hover {
@@ -693,7 +699,7 @@ nav {
 }
 .header__content-span{
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 3px #ff0000;
+  -webkit-text-stroke: 3px #388edf;
 }
 .header_{
   color: #ff0000;
@@ -1093,60 +1099,7 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.code_wrapper{
-  width: 80%;
-  margin: 250px auto;
-  height: 500px;
-  margin-bottom: 100px;
-}
-.code_buttons{
-  position: relative;
-  width: 100%;
-  background-color: #7c7c7c;
-  display: flex;
-  justify-content: space-between;
-}
-.copy_btn{
-  width: 50px;
-  background-color: transparent;
-  border: none;
-  filter: invert(100%);
-}
-.copy{
-  font-size: 18px;
-  color: white;
-  position: absolute;
-  right: 50px;
-  top: 9px;
-}
-.code_btns{
-  display: flex;
-  justify-content: space-between;
-  width: 200px;
-}
-.code_btns button{
-  border: none;
-  width: 100px;
-  height: 40px;
-  font-weight: 400;
-}
 
-.selected-button {
-  background-color: #7c7c7c;
-  color: white; 
-
-}
-
-.deselected-button {
-  background-color: #f8f9fa; 
-  color: #212529;
-}
-.code{
-  overflow-y: scroll;
-  width: 100%;
-  height: 100%;
-  filter: invert(100%);
-}
 
 @media (max-width: 1288px) {
   #text {
@@ -1182,9 +1135,7 @@ button {
   margin: 300px 0 0px 0;
 }
 
-.code_wrapper{
-  margin-top: 350px;
-}
+
 }
 @media (max-width: 988px) {
   .right {
@@ -1211,7 +1162,10 @@ button {
     margin: 500px 0 -150px 0;
   }
   .details_container-{
-    margin: 400px 0 0px 0;
+    margin: 400px 0 0px 0;  
+  }
+  .details_container--{
+    margin: 40px 0 0px 0;  
   }
 }
 @media (max-width: 850px) {
@@ -1222,12 +1176,13 @@ button {
   .details_container-{
     margin: 300px 0 0px 0;
   }
+  .details_container--{
+    margin: -50px 0 350px 0;  
+  }
   .pj2_img{
     margin: -50px auto;
   }
-  .code_wrapper{
-    margin-top: 300px;
-  }
+
   }
 @media (max-width: 750px) {
   .modal__wrapper,
@@ -1284,7 +1239,9 @@ button {
   .details_container-{
     margin: 500px 0 200px 0;
   }
-
+  .details_container--{
+    margin: -50px 0 450px 0;  
+  }
   .details_container{
     margin: 500px 0 400px 0;
   }
@@ -1406,14 +1363,15 @@ button {
   .details_container-{
     margin: 50px 0 300px 0;
   }
-  .code_wrapper{
-    margin-top: 300px;
-  }
+
 
 }
 @media (max-width: 670px) {
   .details_container-{
     margin: 200px 0 400px 0;
+  }
+  .details_container--{
+    margin: 150px 0 450px 0;  
   }
   .project_modal{
     top: 172%;
@@ -1451,6 +1409,9 @@ button {
   .details_container-{
     margin: 500px 0 300px 0;
   }
+  .details_container--{
+    margin: 200px 0 100px 0;  
+  }
   .laptop_gif{
     height: 50vh;
   }
@@ -1481,9 +1442,7 @@ button {
   .pj2_img{
     margin: -50px auto;
   }
-  .code_wrapper{
-    margin-top: 600px;
-  }
+
 } 
 @media (width < 450px) {
   .details_container{
@@ -1491,6 +1450,9 @@ button {
   }
   .details_container-{
     margin: 600px 0 500px 0;
+  }
+  .details_container--{
+    margin: 550px 0 400px 0;  
   }
   .card {
     width: 100%;
