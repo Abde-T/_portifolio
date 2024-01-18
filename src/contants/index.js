@@ -15,6 +15,7 @@ const Python = 'https://ik.imagekit.io/lqn2gvopq/python.png?updatedAt=1704353016
 const kivy = 'https://ik.imagekit.io/lqn2gvopq/kivy.png?updatedAt=1704352998604'
 import twitter from '../assets/twitter.png'
 import Firebase from '../assets/firebase.png'
+import mv from '../assets/mvh.png'
 
 const technologies = [
   { name: "HTML5", icon: html },
@@ -67,18 +68,18 @@ const project2 = [
 
 const project3 = [
   {
-    name: "Fake Shop",
-    image: fakeShop,
-    github: "https://github.com/Abde-T/Fake-shop",
-    link: "https://fake-shop-three.vercel.app/",
+    name: "Movie Heaven",
+    image: mv,
+    github: "https://github.com/Abde-T/movieheaven",
+    link: "https://movieheaven.vercel.app/",
   },
 ];
 
 const project3tech = [
-  { name: "HTML5", image: html },
-  { name: "CSS3", image: css },
-  { name: "JavaScript", image: javascript },
-  { name: "ReactJS", image: reactjs },
+  {name: "Next.js", image: next },
+  {name: "Redux", image: redux },
+  {name: "TailwinCss", image: tailwind },
+  {name: "Firebase", image: Firebase },
 ];
 
 const pj1_features = [
@@ -137,24 +138,19 @@ const pj2_features = [
 
 const pj3_features = [
   {
-    h1: "React Framework",
-    p: " Implemented the project using the React framework, ensuring a modular and efficient front-end structure.",
+    p: " Implemented a sleek and intuitive user interface using modern technologies such as React and Redux.",
   },
   {
-    h1: "Fake Store API Integration",
-    p: "Utilized the Fake Store API to dynamically fetch and display product information, including images, descriptions, and prices, offering users a realistic shopping experience.",
+    p: " Incorporated Firebase for seamless user authentication and real-time updates, enhancing the overall user experience.",
   },
   {
-    h1: "Pagination",
-    p: "Implemented a robust pagination system, enabling users to navigate seamlessly through different product pages, improving overall user experience.",
+    p: " Created a vast library of movies, allowing users to explore, discover, and enjoy a wide range of films at their fingertips.",
   },
   {
-    h1: "Shopping Cart Functionality",
-    p: "Developed a user-friendly shopping cart feature that allows users to add, remove, and view selected items. The cart displays a summary of products along with their individual prices and a total amount.",
+    p: "Engineered a feature-rich platform that enables users to browse, and search movies effortlessly.",
   },
   {
-    h1: "Responsive Design",
-    p: "Ensured a responsive design to provide a consistent and visually appealing experience across various devices, including desktops, tablets, and mobile phones.",
+    p: " Prioritized responsive design with Tailwind CSS, ensuring a visually stunning and user-friendly interface across devices.",
   },
 ];
 

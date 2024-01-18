@@ -353,11 +353,9 @@ a {
   -ms-user-select: none;
 }
 .pj3_img{
-  width: 170%;
-  position: absolute;
-  left: -132px;
-  top: 0;
-  
+  width: 100%;
+  margin-top: 50px;
+
 }
 .pj2-img{
   width: 100%;
@@ -488,7 +486,7 @@ footer {
 
 .explore__card-:hover {
   background-color: #2e5070;
-  border-color: #3684ce;
+  border-color: #ce4036;
 }
 
 .explore__card {
@@ -555,9 +553,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 80%;
   max-width: 1200px;
-  height: 80vh;
 }
 
 .class__content {
@@ -589,10 +586,13 @@ footer {
   width: 100%;
   filter: invert(29%) sepia(15%) saturate(1511%) hue-rotate(168deg) brightness(97%) contrast(97%);
 }
+.github--{
+  width: 100%;
+  filter: invert(22%) sepia(82%) saturate(6897%) hue-rotate(2deg) brightness(99%) contrast(112%);}
 .links{
   display: flex;
 }
-.btn, .btn- {
+.btn, .btn-, .btn--  {
   padding: 18px 20px;
   outline: none;
   border: none;
@@ -609,6 +609,13 @@ footer {
   color: var(--white);
 }
 .btn-:hover {
+  background-color: var(--secondary-color);
+}
+.btn--{
+  background-color: #ee1e0f;
+  color: var(--white);
+}
+.btn--:hover {
   background-color: var(--secondary-color);
 }
 
